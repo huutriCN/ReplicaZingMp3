@@ -23,9 +23,17 @@ module.exports = {
         extensions: ['.js', '.jsx'],
       },
     ],
+    'react/function-component-definition': [
+      2,
+      {
+        namedComponents: 'arrow-function',
+        unnamedComponents: 'arrow-function',
+      },
+    ],
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 'off',
     'react/jsx-props-no-spreading': 'off',
     'prettier/prettier': 'off',
+    'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
   },
 };

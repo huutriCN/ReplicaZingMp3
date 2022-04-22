@@ -1,0 +1,16 @@
+html,
+body {
+  font-family: $primary-font;
+  line-height: 1;
+  color: #333;
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+}
+
+img{
+  max-width: 100%;
+  display: block;
+}

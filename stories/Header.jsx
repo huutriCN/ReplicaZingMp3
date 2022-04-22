@@ -1,10 +1,8 @@
-import PropTypes from 'prop-types';
-import Button from './Button';
-import './header.css';
+import PropTypes from "prop-types";
+import Button from "./Button";
+import "./header.css";
 
-const Header = ({
-  user, onLogin, onLogout, onCreateAccount,
-}) => (
+const Header = ({ user, onLogin, onLogout, onCreateAccount }) => (
   <header>
     <div className="wrapper">
       <div>
@@ -36,8 +34,7 @@ const Header = ({
           <>
             <span className="welcome">
               Welcome,
-              <b>{user.name}</b>
-              !
+              <b>{user.name}</b>!
             </span>
             <Button size="small" onClick={onLogout} label="Log out" />
           </>

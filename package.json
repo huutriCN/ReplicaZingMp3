@@ -7,24 +7,33 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "lint:js": "next lint **/*.js --fix",
+    "lint:prettier": "prettier . --write",
+    "lint-staged": "lint-staged . ",
+    "lint-staged:js": "next` lint **/*.js --fix",
+    "lint-staged:prettier": "prettier . --write",
     "precommit": "lint-staged",
     "prepare": "husky install",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
   "lint-staged": {
-    "*.js": [
+    "*.{js,jsx}": [
       "eslint --fix"
     ],
-    "*.{html,js}": [
+    "*.{html,js,jsx}": [
       "prettier --write"
+    ],
+    "*.scss": [
+      "stylelint  **/*.scss --fix"
     ]
   },
   "dependencies": {
     "next": "12.1.5",
     "prop-types": "^15.8.1",
     "react": "18.0.0",
-    "react-dom": "18.0.0"
+    "react-dom": "18.0.0",
+    "sass": "^1.50.1"
   },
   "devDependencies": {
     "@babel/core": "^7.17.9",
@@ -49,9 +58,10 @@
     "eslint-plugin-storybook": "^0.5.10",
     "husky": "^7.0.4",
     "lint-staged": "^12.3.8",
+    "postcss": "8",
     "prettier": "^2.6.2",
-    "stylelint-config-prettier": "^9.0.3",
-    "stylelint-config-standard-scss": "^3.0.0",
-    "stylint": "^2.0.0"
+    "stylelint": "^14.7.1",
+    "stylelint-config-prettier-scss": "^0.0.1",
+    "stylelint-config-standard-scss": "^3.0.0"
   }
 }

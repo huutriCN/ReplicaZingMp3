@@ -1,0 +1,11 @@
+@import "../../styles/mixins";
+
+.chartRanking {
+  background-color: #880015;
+  font-size: 1.5rem;
+  height: 100%;
+  font-weight: 400;
+  color: #fff;
+  text-transform: uppercase;
+  @include centerHV;
+}

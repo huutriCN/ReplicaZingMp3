@@ -1,0 +1,11 @@
+@import "../../styles/mixins";
+
+.topic {
+  background-color: #ff7f27;
+  font-size: 1rem;
+  height: 100%;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  @include centerHV;
+}

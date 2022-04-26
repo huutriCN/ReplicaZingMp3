@@ -1,7 +1,7 @@
 @import "../../styles/mixins";
 
 .playlist {
-  @include centerHV;
+  @include center-hv;
 
   background-color: #ed1c24;
   font-size: 1rem;

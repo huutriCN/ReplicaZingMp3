@@ -4,6 +4,8 @@ module.exports = {
     es2021: true,
   },
   extends: [
+    "next",
+    "next/core-web-vitals",
     "plugin:react/recommended",
     "airbnb",
     "plugin:storybook/recommended",
@@ -11,9 +13,9 @@ module.exports = {
   ],
   parserOptions: {
     ecmaFeatures: {
-      jsx: true,
+      module: true,
     },
-    ecmaVersion: "latest",
+    ecmaVersion: 6,
     sourceType: "module",
   },
   plugins: ["react", "prettier"],
@@ -31,11 +33,22 @@ module.exports = {
         unnamedComponents: "arrow-function",
       },
     ],
-    "linebreak-style": ["error", "unix"],
+    "linebreak-style": 0,
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",
     "react/jsx-props-no-spreading": "off",
     "prettier/prettier": "error",
-    "import/no-extraneous-dependencies": ["error", { devDependencies: true }],
+    "@next/next/no-img-element": "off",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        devDependencies: [
+          "**/*.stories.*",
+          "**/.storybook/**/*.*",
+          "**/webpack.*.js",
+        ],
+        peerDependencies: true,
+      },
+    ],
   },
 };

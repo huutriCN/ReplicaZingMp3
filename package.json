@@ -10,7 +10,7 @@
     "lint:js": "next lint **/*.js --fix",
     "lint:prettier": "prettier . --write",
     "lint-staged": "lint-staged . ",
-    "lint-staged:js": "next` lint **/*.js --fix",
+    "lint-staged:js": "next lint **/*.js --fix",
     "lint-staged:prettier": "prettier . --write",
     "precommit": "lint-staged",
     "prepare": "husky install",
@@ -30,11 +30,13 @@
   },
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
+    "classnames": "^2.3.1",
     "next": "12.1.5",
     "node-sass": "^7.0.1",
     "prop-types": "^15.8.1",
     "react": "18.0.0",
-    "react-dom": "18.0.0"
+    "react-dom": "18.0.0",
+    "sass-resources-loader": "^2.2.5"
   },
   "devDependencies": {
     "@babel/core": "^7.17.9",

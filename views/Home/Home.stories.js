@@ -1,38 +1,8 @@
-import PropTypes from "prop-types";
+import HomeComponent from "./index";
 
-const Button = ({
-  label,
-  backgroundColor = "red",
-  size = "md",
-  handleClick,
-}) => {
-  let scale = 1;
-  if (size === "sm") scale = 0.75;
-  if (size === "lg") scale = 1.5;
-  const style = {
-    backgroundColor,
-    padding: `${scale * 0.5}rem ${scale * 1}rem`,
-    border: "none",
-  };
-  return (
-    // eslint-disable-next-line react/button-has-type
-    <button onClick={handleClick} style={style}>
-      {label}
-    </button>
-  );
-};
-Button.defaultProps = {
-  label: "Hello",
-  backgroundColor: "red",
-  size: "sm",
-  handleClick: () => {},
+export default {
+  title: "Home",
+  component: HomeComponent,
 };
 
-Button.propTypes = {
-  label: PropTypes.string,
-  backgroundColor: PropTypes.string,
-  size: PropTypes.oneOf(["sm", "md", "lg"]),
-  handleClick: PropTypes.func,
-};
-
-export default Button;
+export const PrimaryNews = () => <HomeComponent />;

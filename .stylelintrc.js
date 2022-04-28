@@ -5,7 +5,7 @@ module.exports = {
     "stylelint-config-prettier-scss",
   ],
   rules: {
-    "unit-allowed-list": ["em", "rem", "px", "%", "fr"],
+    "unit-allowed-list": ["em", "rem", "px", "%", "fr", "s"],
     "no-empty-source": null,
     "block-no-empty": null,
     "custom-property-no-missing-var-function": true,
@@ -15,9 +15,6 @@ module.exports = {
     "scss/at-rule-no-unknown": true,
     "scss/dollar-variable-pattern": "[a-z][a-zA-Z]+",
     "scss/selector-no-redundant-nesting-selector": true,
-    "selector-class-pattern": [
-      // Naming conventions-
-      "^[a-z][a-zA-Z0-9]+$",
-    ],
+    "selector-class-pattern": ["^[a-z0-9]+(-[a-z0-9]+)*$"],
   },
 };

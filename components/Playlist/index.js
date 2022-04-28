@@ -1,7 +1,7 @@
-import styles from "./Playlist.module.scss";
+import styles from "./styles.module.scss";
 
-const Playlist = ({ className }) => (
-  <div className={`${styles.playlist} ${className}`}>Personal Playlist</div>
+const Playlist = ({ playlistTitle }) => (
+  <div className={styles["playlist-wrapper"]}>{playlistTitle}</div>
 );
 
 export default Playlist;

@@ -1,44 +1,35 @@
 import styles from "./Home.module.scss";
-import ChartRanking from "../../sections/ChartRanking/main";
-import Playlist from "../../components/Playlist";
-import Topic from "../../components/Topic";
-import Tracking from "../../sections/Tracking/main";
-import Session from "../../sections/Session/main";
-import Partners from "../../sections/Partners/main";
+import ChartRanking from "../../layouts/MainLayouts/ChartRanking";
+import HotArtists from "../../layouts/MainLayouts/HotArtists";
+import HotTopic from "../../layouts/MainLayouts/HotTopic";
+import HotVideo from "../../layouts/MainLayouts/HotVideo";
+import News from "../../layouts/MainLayouts/News";
+import NewSongs from "../../layouts/MainLayouts/NewSongs";
+import Partners from "../../layouts/MainLayouts/Partners";
+import PersonalPlaylist from "../../layouts/MainLayouts/PersonalPlaylist";
+import TodaySelection from "../../layouts/MainLayouts/TodaySelection";
+import WeeklyAlbumRanking from "../../layouts/MainLayouts/WeeklyAlbumRanking";
+import WeeklyMVRanking from "../../layouts/MainLayouts/WeeklyMVRanking";
+import WeeklySongRanking from "../../layouts/MainLayouts/WeeklySongRanking";
+import HotALbum from "../../layouts/MainLayouts/HotAlbum";
 
 const Home = () => (
-  <section className={styles.container}>
-    <div className={styles.gridContainer}>
-      <Playlist className={styles.personalPlaylist} />
-      <Topic className={styles.hotTopic} />
-      <Session
-        className={styles.weeklySongRanking}
-        sessionTitle="Weely Song Ranking"
-      />
-      <Session
-        className={styles.weeklyMVRanking}
-        sessionTitle="Weely MV Ranking"
-      />
-      <Session
-        className={styles.weeklyAlbumRanking}
-        sessionTitle="Weely Album Ranking"
-      />
-
-      <Session className={styles.news} sessionTitle="News" />
-
-      <ChartRanking className={styles.chartRanking} />
-
-      <Tracking
-        className={styles.todaySelection}
-        trackingTitle="Today Selection"
-      />
-      <Tracking className={styles.hotVideo} trackingTitle="Hot Video" />
-      <Tracking className={styles.hotAlbum} trackingTitle="Hot Album" />
-
-      <Session className={styles.newSongs} sessionTitle="New Songs" />
-
-      <Session className={styles.hotArtist} sessionTitle="Hot Artists" />
-      <Partners className={styles.partners} />
+  <section className={styles["home-wrapper"]}>
+    <div className={styles["home-wrapper-inner"]}>
+      <ChartRanking />
+      <HotArtists />
+      <HotALbum />
+      <HotVideo />
+      <HotTopic />
+      <HotVideo />
+      <News />
+      <NewSongs />
+      <Partners />
+      <PersonalPlaylist />
+      <TodaySelection />
+      <WeeklyAlbumRanking />
+      <WeeklyMVRanking />
+      <WeeklySongRanking />
     </div>
   </section>
 );

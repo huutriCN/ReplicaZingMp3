@@ -1,0 +1,85 @@
+@import "../../styles/mixins";
+
+.footer {
+  &-wrapper {
+    width: 100%;
+    background-color: #222428;
+    font-size: 12px;
+    color: #fff;
+  }
+
+  &-wrapper-inner {
+    @include content-wrapper;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  &-copyright {
+    display: flex;
+    align-items: center;
+  }
+
+  &-link {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px 20px;
+
+    a {
+      font-weight: 300;
+      color: #ddd;
+    }
+  }
+}
+
+.copyright-desc {
+  margin-left: 15px;
+  color: #808080;
+
+  p:not(:first-child) {
+    margin: 8px 0 0;
+  }
+}
+
+.social {
+  &-wrapper {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.versions {
+  margin-top: 5px;
+  text-align: right;
+}
+
+.icon {
+  width: 34px;
+  height: 34px;
+  margin-left: 8px;
+  margin-bottom: 5px;
+  font-size: 0;
+  cursor: pointer;
+
+  &:hover{
+    filter: brightness(110%);
+  }
+}
+
+.facebook {
+  background-image: url("/static/facebook.png");
+}
+
+.youtube {
+  background-image: url("/static/youtube.png");
+}
+
+.google {
+  background-image: url("/static/google.png");
+}
+
+.zalo {
+  background-image: url("/static/zalo.png");
+}

@@ -1,7 +1,7 @@
-import styles from "./Topic.module.scss";
+import styles from "./styles.module.scss";
 
-const Topic = ({ className }) => (
-  <div className={`${styles.topic} ${className}`}>Hot Topic</div>
+const Topic = ({ topicTitle }) => (
+  <div className={styles["topic-wrapper"]}>{topicTitle}</div>
 );
 
 export default Topic;

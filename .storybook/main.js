@@ -1,10 +1,7 @@
+const custom = require("../webpack.config.js");
+
 module.exports = {
-  stories: [
-    "../components/**/*.stories.mdx",
-    "../components/**/*.stories.js",
-    "../sections/**/*.stories.@(js|jsx|ts|tsx)",
-    "../views/**/*.stories.js",
-  ],
+  stories: ["../components/**/*.stories.js", "../views/**/*.stories.js"],
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
@@ -14,5 +11,11 @@ module.exports = {
   framework: "@storybook/react",
   core: {
     builder: "@storybook/builder-webpack5",
+  },
+  webpackFinal: async (config) => {
+    return {
+      ...config,
+      module: { ...config.module, rules: custom.module.rules },
+    };
   },
 };

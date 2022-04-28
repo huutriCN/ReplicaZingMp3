@@ -1,9 +1,4 @@
 import Home from "../views/Home";
-import Layout from "../sections/Layout/main";
 
-const HomeComponent = () => (
-  <Layout>
-    <Home />
-  </Layout>
-);
+const HomeComponent = () => <Home />;
 export default HomeComponent;

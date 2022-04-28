@@ -1,0 +1,18 @@
+@import "../../../../styles/mixins";
+
+.ranking {
+  &-wrapper {
+    grid-area: chart-ranking;
+  }
+
+  &-wrapper-inner {
+    @include perfect-center;
+
+    height: 100%;
+    background-color: #880015;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #fff;
+  }
+}

@@ -1,0 +1,15 @@
+.copyright {
+  &-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &-desc {
+    margin-left: 15px;
+    color: #808080;
+
+    p:not(:first-child) {
+      margin: 8px 0 0;
+    }
+  }
+}

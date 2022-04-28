@@ -1,0 +1,12 @@
+.link {
+  &-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px 20px;
+
+    a {
+      font-weight: 300;
+      color: #ddd;
+    }
+  }
+}

@@ -5,7 +5,6 @@ module.exports = {
   },
   extends: [
     "next",
-    "next/core-web-vitals",
     "plugin:react/recommended",
     "airbnb",
     "plugin:storybook/recommended",
@@ -20,12 +19,6 @@ module.exports = {
   },
   plugins: ["react", "prettier"],
   rules: {
-    "react/jsx-filename-extension": [
-      1,
-      {
-        extensions: [".js", ".jsx"],
-      },
-    ],
     "react/function-component-definition": [
       2,
       {

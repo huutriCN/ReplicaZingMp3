@@ -17,10 +17,6 @@
     padding: 20px;
   }
 
-  &-copyright {
-    display: flex;
-    align-items: center;
-  }
 
   &-link {
     display: grid;
@@ -34,14 +30,7 @@
   }
 }
 
-.copyright-desc {
-  margin-left: 15px;
-  color: #808080;
 
-  p:not(:first-child) {
-    margin: 8px 0 0;
-  }
-}
 
 .social {
   &-wrapper {
@@ -69,17 +58,17 @@
 }
 
 .facebook {
-  background-image: url("/static/facebook.png");
+  background-image: url("../../public/static/facebook.png");
 }
 
 .youtube {
-  background-image: url("/static/youtube.png");
+  background-image: url("../../public/static/youtube.png");
 }
 
 .google {
-  background-image: url("/static/google.png");
+  background-image: url("../../public/static/google.png");
 }
 
 .zalo {
-  background-image: url("/static/zalo.png");
+  background-image: url("../../public/static/zalo.png");
 }

@@ -1,0 +1,12 @@
+@import "../../../../styles/mixins";
+
+.playlist-wrapper {
+  @include perfect-center;
+
+  height: 100%;
+  background-color: #ed1c24;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  text-transform: uppercase;
+}

@@ -28,10 +28,14 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|jpe?g|gif)$/i,
+        test: /\.(jpe?g|png|gif|svg)$/i,
         loader: "file-loader",
         options: {
           name: "[path][name].[ext]",
+          outputPath: (file) => {
+            const p = file.split("public/")[1];
+            return p;
+          },
         },
       },
     ],

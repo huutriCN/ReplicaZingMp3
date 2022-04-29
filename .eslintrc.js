@@ -4,28 +4,44 @@ module.exports = {
     es2021: true,
   },
   extends: [
-    'plugin:react/recommended',
-    'airbnb',
-    'plugin:storybook/recommended',
+    "next",
+    "plugin:react/recommended",
+    "airbnb",
+    "plugin:storybook/recommended",
+    "eslint-config-prettier",
   ],
   parserOptions: {
     ecmaFeatures: {
-      jsx: true,
+      module: true,
     },
-    ecmaVersion: 'latest',
-    sourceType: 'module',
+    ecmaVersion: 6,
+    sourceType: "module",
   },
-  plugins: ['react'],
+  plugins: ["react", "prettier"],
   rules: {
-    'react/jsx-filename-extension': [
-      1,
+    "react/function-component-definition": [
+      2,
       {
-        extensions: ['.js', '.jsx'],
+        namedComponents: "arrow-function",
+        unnamedComponents: "arrow-function",
       },
     ],
-    'react/react-in-jsx-scope': 'off',
-    'react/prop-types': 'off',
-    'react/jsx-props-no-spreading': 'off',
-    'prettier/prettier': 'off',
+    "linebreak-style": 0,
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off",
+    "react/jsx-props-no-spreading": "off",
+    "prettier/prettier": "error",
+    "@next/next/no-img-element": "off",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        devDependencies: [
+          "**/*.stories.*",
+          "**/.storybook/**/*.*",
+          "**/webpack.*.js",
+        ],
+        peerDependencies: true,
+      },
+    ],
   },
 };

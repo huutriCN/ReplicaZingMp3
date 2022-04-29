@@ -7,23 +7,34 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "lint:js": "next lint **/*.js --fix",
+    "lint:prettier": "prettier . --write",
+    "lint-staged": "lint-staged . ",
+    "lint-staged:js": "next lint **/*.js --fix",
+    "lint-staged:prettier": "prettier . --write",
     "precommit": "lint-staged",
     "prepare": "husky install",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
   "lint-staged": {
-    "*.js": [
+    "*.{js,jsx}": [
       "eslint --fix"
     ],
-    "*.{html,js}": [
+    "*.{html,js,jsx}": [
       "prettier --write"
+    ],
+    "*.scss": [
+      "stylelint  **/*.scss --fix"
     ]
   },
   "dependencies": {
+    "classnames": "^2.3.1",
     "next": "12.1.5",
+    "prop-types": "^15.8.1",
     "react": "18.0.0",
-    "react-dom": "18.0.0"
+    "react-dom": "18.0.0",
+    "sass": "^1.51.0"
   },
   "devDependencies": {
     "@babel/core": "^7.17.9",
@@ -33,9 +44,9 @@
     "@storybook/addon-links": "^6.4.22",
     "@storybook/builder-webpack5": "^6.4.22",
     "@storybook/manager-webpack5": "^6.4.22",
+    "@storybook/preset-scss": "^1.0.3",
     "@storybook/react": "^6.4.22",
     "@storybook/testing-library": "^0.0.10",
-    "babel-loader": "^8.2.5",
     "eslint": "^8.13.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-next": "12.1.5",
@@ -46,8 +57,15 @@
     "eslint-plugin-react": "^7.29.4",
     "eslint-plugin-react-hooks": "^4.4.0",
     "eslint-plugin-storybook": "^0.5.10",
+    "file-loader": "^6.2.0",
     "husky": "^7.0.4",
     "lint-staged": "^12.3.8",
-    "prettier": "^2.6.2"
+    "postcss": "8",
+    "prettier": "^2.6.2",
+    "storybook-addon-next": "^1.6.2",
+    "stylelint": "^14.7.1",
+    "stylelint-config-prettier-scss": "^0.0.1",
+    "stylelint-config-standard-scss": "^3.0.0",
+    "stylelint-scss": "^4.2.0"
   }
 }

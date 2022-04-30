@@ -1,0 +1,46 @@
+.buttons-wrapper {
+  display: flex;
+  align-items: center;
+
+  a {
+    color: $thirdColor;
+  }
+}
+
+.btn {
+  &-ads {
+    display: flex;
+    align-items: center;
+    transition: all 0.2s linear;
+
+    &:hover {
+      color: $titleColor;
+
+      i {
+        background: url("../../../../public/static/Turn_Off.png") no-repeat left;
+      }
+    }
+  }
+
+  &-icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url("../../../../public/static/Turn_On.png") no-repeat left;
+    font-size: 0;
+    color: transparent;
+  }
+
+  &-upload {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+    background: url("../../../../public/static/upload.png") no-repeat center;
+    font-size: 0;
+    color: transparent;
+
+    &:hover {
+      filter: brightness(130%);
+    }
+  }
+}

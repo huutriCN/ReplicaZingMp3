@@ -1,11 +1,9 @@
-import Image from "next/image";
 import styles from "./styles.module.scss";
-import footers from "../../../../dataSources/Footer";
 
 const FooterCopyRight = () => (
   <div className={styles["copyright-wrapper"]}>
     <div>
-      <Image src={footers.footerCopyright.image} />
+      <img src="/static/icon_zing_mp3_60.png" alt="Zing Mp3" />
     </div>
     <div className={styles["copyright-desc"]}>
       <p>© 2015 VNG Corporation</p>

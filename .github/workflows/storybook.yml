@@ -14,8 +14,14 @@ jobs:
 
       - name: Install and Build
         run: |
+          if [ -e yarn.lock ]; then
+          yarn install --frozen-lockfile
+          elif [ -e package-lock.json ]; then
           npm ci
-          npm run build-storybook
+          else
+          npm i
+          fi
+
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@3.6.2

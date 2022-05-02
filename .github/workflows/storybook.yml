@@ -16,10 +16,12 @@ jobs:
         run: |
           if [ -e yarn.lock ]; then
           yarn install --frozen-lockfile
+          yarn build-storybook
           elif [ -e package-lock.json ]; then
           npm ci
           else
           npm i
+          npm run build-storybook
           fi
 
 

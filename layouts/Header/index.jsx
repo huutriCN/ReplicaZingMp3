@@ -11,7 +11,7 @@ const Header = () => (
           className={styles["logo-text"]}
           title="Zing Mp3 đỉnh cao âm nhạc"
         >
-          <img src="/static/logo.png" alt="" />
+          <img src="logo.png" alt="" />
         </a>
       </div>
       <div className={styles["header-content"]}>

@@ -1,0 +1,21 @@
+.item-wrapper{
+  position: relative;
+  padding: 15px 20px;
+
+  .item-dropdown {
+    display: none;
+  }
+
+
+  &:hover {
+    background: #fff;
+
+    .item-menu a {
+      color: $titleColor;
+    }
+
+    .item-dropdown {
+      display: block;
+    }
+  }
+}

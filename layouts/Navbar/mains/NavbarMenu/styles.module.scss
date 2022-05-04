@@ -1,53 +1,7 @@
-.menu {
-  &-wrapper {
-    display: flex;
-
-    a {
-      color: $thirdColor;
-    }
-  }
-}
-
-.item {
-  font-family: $secondaryFont;
+.menu-wrapper {
+  display: flex;
 
   a {
-    cursor: pointer;
-  }
-
-  &-separation {
-    width: 1px;
-    height: 20px;
-    margin: 10px 5px 0;
-    background: #ccc;
-  }
-
-  &-dropdown {
-    display: none;
-  }
-
-   &-icon {
-    a {
-      width: 24px;
-      height: 100%;
-      background: url("../../../../public/static/home.png") no-repeat center;
-    }
-  }
-
-  &-menu {
-    position: relative;
-    padding: 15px 20px;
-
-    &:hover {
-      background: #fff;
-
-      .item-menu a {
-        color: $titleColor;
-      }
-
-      .item-dropdown {
-        display: block;
-      }
-    }
+    color: $thirdColor;
   }
 }

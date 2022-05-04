@@ -3,7 +3,7 @@ import styles from "./styles.module.scss";
 const FooterCopyRight = () => (
   <div className={styles["copyright-wrapper"]}>
     <div>
-      <img src="/static/icon_zing_mp3_60.png" alt="Zing Mp3" />
+      <img src="icon_zing_mp3_60.png" alt="Zing Mp3" />
     </div>
     <div className={styles["copyright-desc"]}>
       <p>© 2015 VNG Corporation</p>

@@ -1,0 +1,27 @@
+.component-wrapper {
+  display: flex;
+  justify-content: space-between;
+	align-items: center;
+  font-size: 18px;
+
+  .title-wrapper {
+    display: flex;
+    color: #800080;
+
+    .title-content {
+      font-family: $primaryFont;
+      font-weight: 300;
+      color: #800080;
+      text-transform: uppercase;
+    }
+  }
+
+  .title-icon {
+		font-size: 25px;
+		cursor: pointer;
+
+		&:hover{
+    	color: #800080;
+		}
+  }
+}

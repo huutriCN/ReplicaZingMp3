@@ -26,7 +26,7 @@
       }
 
       a:hover {
-        color: #800080;
+        color: $secondaryColor;
       }
     }
 
@@ -46,8 +46,32 @@
       cursor: pointer;
 
       :hover {
-        color: #800080;
+        color: $secondaryColor;
       }
+    }
+  }
+}
+
+.normal {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #f2f2f2;
+  padding: 0 10px 15px 0;
+
+  .desc-ranking {
+    color: $thirdColor;
+  }
+
+  .desc-content {
+    .desc-name a {
+      color: $thirdColor;
+    }
+
+    .desc-artists a {
+      color: #333;
+    }
+
+    a:hover {
+      color: $secondaryColor;
     }
   }
 }

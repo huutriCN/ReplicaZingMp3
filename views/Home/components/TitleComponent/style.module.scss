@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
 	align-items: center;
+  margin-bottom: 25px;
   font-size: 18px;
 
   .title-wrapper {
@@ -11,8 +12,8 @@
     .title-content {
       font-family: $primaryFont;
       font-weight: 300;
-      color: #800080;
       text-transform: uppercase;
+      color: #800080;
     }
   }
 

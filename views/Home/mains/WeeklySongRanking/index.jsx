@@ -1,9 +1,18 @@
+// Components
+import TabComponent from "../../components/TabComponent";
 import TitleComponent from "../../components/TitleComponent";
+
+// others
 import styles from "./styles.module.scss";
+import ranking from "../../../../dataSources/WeeklySongRanking";
 
 const WeeklySongRanking = () => (
   <div className={styles["ranking-wrapper"]}>
-    <TitleComponent title="#ZingChart Tuần - Bài Hát" canPlay />
+    <TitleComponent title={ranking.title} canPlay={ranking.canPlay} />
+    <TabComponent
+      tabList={ranking.tabList}
+      currentActiveTab={ranking.currentActiveTab}
+    />
   </div>
 );
 

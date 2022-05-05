@@ -1,0 +1,22 @@
+.component-wrapper{
+	position: relative;
+
+	.component-desc {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		z-index: 99999999;
+		padding: 0 10px 10px;
+		color: #fff;
+	}
+
+	.component-mask{
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		height: 50%;
+		background: linear-gradient(to bottom,transparent 0%,rgb(0 0 0 / 80%) 100%);
+	}
+
+}

@@ -1,0 +1,53 @@
+.desc-wrapper {
+  &-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: $secondaryFont;
+
+    .desc-ranking {
+      margin: 10px;
+      font-size: 20px;
+    }
+
+    .desc-content {
+      flex-grow: 1;
+      text-align: left;
+
+      .desc-name a {
+        line-height: 20px;
+        font-size: 14px;
+      }
+
+      .desc-artists {
+        display: flex;
+        line-height: 17px;
+        font-size: 12px;
+      }
+
+      a:hover {
+        color: #800080;
+      }
+    }
+
+    .desc-tools {
+      opacity: 0;
+      transition: 0s all linear;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    .tool-item {
+      margin-right: 10px;
+      font-size: 18px;
+      color: #333;
+      cursor: pointer;
+
+      :hover {
+        color: #800080;
+      }
+    }
+  }
+}

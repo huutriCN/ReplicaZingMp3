@@ -1,6 +1,7 @@
 // Components
 import TabComponent from "../../components/TabComponent";
 import TitleComponent from "../../components/TitleComponent";
+import ImageCoverComponent from "../../components/ImageCoverComponent";
 
 // others
 import styles from "./styles.module.scss";
@@ -13,6 +14,7 @@ const WeeklySongRanking = () => (
       tabList={ranking.tabList}
       currentActiveTab={ranking.currentActiveTab}
     />
+    <ImageCoverComponent />
   </div>
 );
 

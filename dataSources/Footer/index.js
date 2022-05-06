@@ -1,5 +1,5 @@
-import cert from "../../public/static/cert.png";
-import logo from "../../public/static/icon_zing_mp3_60.png";
+import cert from "../../public/cert.png";
+import logo from "../../public/icon_zing_mp3_60.png";
 
 const footers = {
   footerSocials: [

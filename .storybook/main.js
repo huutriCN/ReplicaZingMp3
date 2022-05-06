@@ -2,7 +2,6 @@ const path = require("path");
 
 module.exports = {
   stories: [
-    "../components/**/*.stories.@(js|jsx|ts|tsx)",
     "../views/**/*.stories.@(js|jsx|ts|tsx)",
     "../layouts/**/*.stories.@(js|jsx|ts|tsx)",
   ],
@@ -10,7 +9,6 @@ module.exports = {
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
-    "@storybook/preset-scss",
     {
       name: "storybook-addon-next",
       options: {
@@ -18,15 +16,8 @@ module.exports = {
       },
     },
   ],
-  framework: "@storybook/react",
   core: {
     builder: "@storybook/builder-webpack5",
   },
   staticDirs: ["../public"],
-  // webpackFinal: async (config) => {
-  //   return {
-  //     ...config,
-  //     module: { ...config.module, rules: custom.module.rules },
-  //   };
-  // },
 };

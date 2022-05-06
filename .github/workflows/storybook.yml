@@ -1,0 +1,32 @@
+name: Storybook
+on:
+  push:
+    branches: [develop]
+  pull_request:
+    branches: [develop]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.3.1
+
+      - name: Install and Build
+        run: |
+          if [ -e yarn.lock ]; then
+          yarn install --frozen-lockfile
+          yarn build-storybook
+          elif [ -e package-lock.json ]; then
+          npm ci
+          else
+          npm i
+          npm run build-storybook
+          fi
+
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@3.6.2
+        with:
+          branch: feature/huutri/home/github-storybook
+          folder: storybook-static 

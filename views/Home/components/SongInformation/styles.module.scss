@@ -1,0 +1,32 @@
+.infor-wrapper {
+  text-align: left;
+
+  .infor-name a {
+    line-height: 20px;
+    font-size: 14px;
+  }
+
+  .infor-artists {
+    display: flex;
+    line-height: 17px;
+    font-size: 12px;
+  }
+
+  a:hover {
+    color: $secondaryColor;
+  }
+}
+
+.dark-text {
+  .infor-name a {
+    color: $thirdColor;
+  }
+
+  .infor-artists a {
+    color: #333;
+  }
+  
+  a:hover{
+    color: $secondaryColor;
+  }
+}

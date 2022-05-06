@@ -8,7 +8,11 @@ const ImageCoverComponent = (props) => (
     <a href="/home">
       <img src="/cover.jpg" alt="" />
     </a>
-    <SongDescription className={styles["component-desc"]} {...props} />
+    <SongDescription
+      className={styles["component-desc"]}
+      color="white"
+      {...props}
+    />
     <span className={styles["component-mask"]} />
   </div>
 );

@@ -3,6 +3,7 @@ import classNames from "classnames";
 
 // components
 import DescriptionTools from "../DescriptionTools";
+import SongInfomation from "../SongInformation";
 
 // others
 import styles from "./styles.module.scss";
@@ -12,6 +13,7 @@ const SongDescription = ({
   title,
   artistsNames,
   rankingNumber = 1,
+  color = "dark",
 }) => {
   const descStyle = className || styles.normal;
 
@@ -22,18 +24,11 @@ const SongDescription = ({
           <p>{rankingNumber < 10 ? `0${rankingNumber}` : rankingNumber}</p>
         </div>
         <div className={styles["desc-content"]}>
-          <h3 className={styles["desc-name"]}>
-            <a href={title}>{title}</a>
-          </h3>
-          <div className={styles["desc-artists"]}>
-            {artistsNames.map((artist, index) => (
-              <h4 key={artist}>
-                <a href={artist}>
-                  {index !== 0 ? `, ${artist}` : ` ${artist}`}
-                </a>
-              </h4>
-            ))}
-          </div>
+          <SongInfomation
+            title={title}
+            artistsNames={artistsNames}
+            color={color}
+          />
         </div>
         <div className={styles["desc-tools"]}>
           <DescriptionTools />

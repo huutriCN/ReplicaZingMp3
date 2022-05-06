@@ -13,22 +13,6 @@
 
     .desc-content {
       flex-grow: 1;
-      text-align: left;
-
-      .desc-name a {
-        line-height: 20px;
-        font-size: 14px;
-      }
-
-      .desc-artists {
-        display: flex;
-        line-height: 17px;
-        font-size: 12px;
-      }
-
-      a:hover {
-        color: $secondaryColor;
-      }
     }
 
     .desc-tools{
@@ -45,19 +29,5 @@
 
   .desc-ranking {
     color: $thirdColor;
-  }
-
-  .desc-content {
-    .desc-name a {
-      color: $thirdColor;
-    }
-
-    .desc-artists a {
-      color: #333;
-    }
-
-    a:hover {
-      color: $secondaryColor;
-    }
   }
 }

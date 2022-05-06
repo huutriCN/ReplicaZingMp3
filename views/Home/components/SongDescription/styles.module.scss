@@ -1,5 +1,6 @@
 .desc-wrapper {
   &-inner {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -30,24 +31,9 @@
       }
     }
 
-    .desc-tools {
-      opacity: 0;
-      transition: 0s all linear;
-
-      &:hover {
-        opacity: 1;
-      }
-    }
-
-    .tool-item {
-      margin-right: 10px;
-      font-size: 18px;
-      color: #333;
-      cursor: pointer;
-
-      :hover {
-        color: $secondaryColor;
-      }
+    .desc-tools{
+      position: absolute;
+      right: 0;
     }
   }
 }

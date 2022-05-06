@@ -14,6 +14,7 @@ const SongDescription = ({
   artistsNames,
   rankingNumber = 1,
   color = "dark",
+  showedTools = true,
 }) => {
   const descStyle = className || styles.normal;
 
@@ -31,7 +32,7 @@ const SongDescription = ({
           />
         </div>
         <div className={styles["desc-tools"]}>
-          <DescriptionTools />
+          {showedTools && <DescriptionTools />}
         </div>
       </div>
     </div>

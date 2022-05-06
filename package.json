@@ -21,7 +21,7 @@
     "*.{js,jsx}": [
       "eslint --fix"
     ],
-    "*.{html,js,jsx}": [
+    "*.{html,js,jsx,scss}": [
       "prettier --write"
     ],
     "*.scss": [

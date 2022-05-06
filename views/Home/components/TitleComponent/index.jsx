@@ -3,7 +3,7 @@ import { RightOutlined, PlayCircleOutlined } from "@ant-design/icons";
 
 import styles from "./style.module.scss";
 
-const TitleComponent = ({ title, canPlay }) => (
+const TitleComponent = ({ title, showedPlay }) => (
   <div className={styles["component-wrapper"]}>
     <div className={styles["title-wrapper"]}>
       <a href="/home" className={styles["title-content"]}>
@@ -11,7 +11,7 @@ const TitleComponent = ({ title, canPlay }) => (
       </a>
       <RightOutlined />
     </div>
-    {canPlay && <PlayCircleOutlined className={styles["title-icon"]} />}
+    {showedPlay && <PlayCircleOutlined className={styles["title-icon"]} />}
   </div>
 );
 

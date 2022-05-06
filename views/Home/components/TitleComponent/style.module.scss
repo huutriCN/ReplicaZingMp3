@@ -1,7 +1,7 @@
 .component-wrapper {
   display: flex;
   justify-content: space-between;
-	align-items: center;
+  align-items: center;
   margin-bottom: 25px;
   font-size: 18px;
 
@@ -18,11 +18,11 @@
   }
 
   .title-icon {
-		font-size: 25px;
-		cursor: pointer;
+    font-size: 25px;
+    cursor: pointer;
 
-		&:hover{
-    	color: #800080;
-		}
+    &:hover {
+      color: #800080;
+    }
   }
 }

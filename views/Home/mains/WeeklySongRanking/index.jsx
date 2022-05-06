@@ -13,7 +13,7 @@ import ranking from "../../../../dataSources/WeeklySongRanking";
 
 const WeeklySongRanking = () => (
   <div className={styles["ranking-wrapper"]}>
-    <TitleComponent title={ranking.title} canPlay={ranking.canPlay} />
+    <TitleComponent title={ranking.title} showedPlay={ranking.canPlay} />
     <TabComponent
       tabList={ranking.tabList}
       currentActiveTab={ranking.currentActiveTab}

@@ -12,27 +12,32 @@ import classNames from "classnames";
 // others
 import styles from "./styles.module.scss";
 
-const SongDescription = ({ className }) => {
+const SongDescription = ({
+  className,
+  title,
+  artistsNames,
+  rankingNumber = 1,
+}) => {
   const descStyle = className || styles.normal;
 
   return (
     <div className={classNames(styles["desc-wrapper"], descStyle)}>
       <div className={styles["desc-wrapper-inner"]}>
         <div className={styles["desc-ranking"]}>
-          <p>01</p>
+          <p>{rankingNumber < 10 ? `0${rankingNumber}` : rankingNumber}</p>
         </div>
         <div className={styles["desc-content"]}>
           <h3 className={styles["desc-name"]}>
-            <a href="/home">Đám Cưới Nha?</a>
+            <a href="/home">{title}</a>
           </h3>
           <div className={styles["desc-artists"]}>
-            <h4>
-              <a href="/hongthanh">Hồng Thanh</a>
-            </h4>
-            <span>, </span>
-            <h4>
-              <a href="/hongthanh"> DJ Mie</a>
-            </h4>
+            {artistsNames.map((artist, index) => (
+              <h4 key={artist}>
+                <a href={artist}>
+                  {index !== 0 ? `, ${artist}` : ` ${artist}`}
+                </a>
+              </h4>
+            ))}
           </div>
         </div>
         <div>

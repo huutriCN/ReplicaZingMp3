@@ -1,12 +1,12 @@
-import Image from "next/image";
+// components
 import SongDescription from "../SongDescription";
+// others
 import styles from "./styles.module.scss";
-import cover from "../../../../public/cover.jpg";
 
 const ImageCoverComponent = (props) => (
   <div className={styles["component-wrapper"]}>
     <a href="/home">
-      <Image src={cover} />
+      <img src="/cover.jpg" alt="" />
     </a>
     <SongDescription className={styles["component-desc"]} {...props} />
     <span className={styles["component-mask"]} />

@@ -2,9 +2,9 @@ name: Deploy Nextjs Project to GitHub Pages
 
 on:
   push:
-    branches: [production]
+    branches: [develop]
   pull_request:
-    branches: [production]
+    branches: [develop]
 
 jobs:
   build:

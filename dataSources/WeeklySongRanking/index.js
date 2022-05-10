@@ -1,6 +1,6 @@
 const ranking = {
   title: "#ZingChart Tuần - Bài Hát",
-  canPlay: true,
+  showPlay: true,
   tabList: [
     { title: "Việt Nam", link: "/vietnamesse" },
     { title: "Us- Uk", link: "/us-uk" },

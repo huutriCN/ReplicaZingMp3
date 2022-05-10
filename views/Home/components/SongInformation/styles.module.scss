@@ -30,3 +30,9 @@
     color: $secondaryColor;
   }
 }
+
+.wrap-text {
+  .infor-name a {
+    @include text-wrapper;
+  }
+}

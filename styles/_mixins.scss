@@ -25,3 +25,9 @@
   max-width: 1016px;
   margin: 0 auto;
 }
+
+@mixin text-wrapper {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

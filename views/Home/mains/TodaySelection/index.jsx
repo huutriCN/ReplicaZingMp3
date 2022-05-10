@@ -1,9 +1,26 @@
-import Tracking from "../../components/Tracking";
+// components
+import Selection from "../../components/Selection";
+
+// mocks
+import data from "../../../../mocks/TodaySelection";
+
+// others
 import styles from "./styles.module.scss";
+import selection from "../../../../dataSources/TodaySelection";
 
 const TodaySelection = () => (
   <div className={styles["selection-wrapper"]}>
-    <Tracking trackingTitle="Today Selection" />
+    <h3 className={styles["selection-title"]}>{selection.title}</h3>
+    <div className={styles["selection-content"]}>
+      {data.map((selectionItem) => (
+        <Selection
+          key={selection.title}
+          imageWidth={selection.SELECTION_IMAGE_WIDTH}
+          imageHeight={selection.SELECTION_IMAGE_HEIGHT}
+          {...selectionItem}
+        />
+      ))}
+    </div>
   </div>
 );
 

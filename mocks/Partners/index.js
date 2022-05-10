@@ -1,0 +1,44 @@
+const data = [
+  {
+    thumbnail:
+      "https://static-zmp3.zmdcdn.me/skins/zmp3-v5.1/images/doi-tac/universal.jpeg",
+  },
+  {
+    thumbnail:
+      "https://static-zmp3.zmdcdn.me/skins/zmp3-v5.1/images/doi-tac/sony.png",
+  },
+  {
+    thumbnail:
+      "https://static-zmp3.zmdcdn.me/skins/zmp3-v5.1/images/doi-tac/thuy-nga.png",
+  },
+  {
+    thumbnail:
+      "https://static-zmp3.zmdcdn.me/skins/zmp3-v5.1/images/doi-tac/vcpmc.jpg",
+  },
+  {
+    thumbnail:
+      "https://static-zmp3.zmdcdn.me/skins/zmp3-v5.1/images/doi-tac/riav.jpg",
+  },
+  {
+    thumbnail:
+      "https://static-zmp3.zmdcdn.me/skins/zmp3-v5.1/images/doi-tac/kim-loi.png",
+  },
+  {
+    thumbnail:
+      "https://static-zmp3.zmdcdn.me/skins/zmp3-v5.1/images/doi-tac/phuong-nam.jpg",
+  },
+  {
+    thumbnail:
+      "https://static-zmp3.zmdcdn.me/skins/zmp3-v5.1/images/doi-tac/rang-dong.jpg",
+  },
+  {
+    thumbnail:
+      "https://static-zmp3.zmdcdn.me/skins/zmp3-v5.1/images/doi-tac/vafaco.jpg",
+  },
+  {
+    thumbnail:
+      "https://static-zmp3.zmdcdn.me/skins/zmp3-v5.1/images/doi-tac/ben-thanh.jpg",
+  },
+];
+
+export default data;

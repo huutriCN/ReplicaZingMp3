@@ -1,0 +1,32 @@
+.tabs-wrapper {
+  display: flex;
+
+  .tab-item {
+    width: 33.3%;
+    text-align: center;
+
+    a {
+      width: 100%;
+      height: 100%;
+      background-color: #ecf0f1;
+      font-size: 16px;
+      line-height: 2.5;
+      font-family: $secondaryFont;
+      font-weight: 400;
+      text-transform: uppercase;
+      color: #333;
+    }
+
+    :hover {
+      border-top: 2px solid #721799;
+    }
+  }
+
+  .active a {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-top: 2px solid #721799;
+    background-color: #fff;
+    color: #000;
+  }
+}

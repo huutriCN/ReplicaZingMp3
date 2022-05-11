@@ -1,3 +1,18 @@
 .selection-wrapper {
   grid-area: today-selection;
+
+  .selection-title {
+    margin-bottom: 25px;
+    font-size: 26px;
+    font-family: $primaryFont;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #800080;
+  }
+
+  .selection-content {
+    display: grid;
+    grid-template-columns: repeat(4, 152px);
+    grid-gap: 45px 15px;
+  }
 }

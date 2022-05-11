@@ -1,0 +1,19 @@
+.tools-wrapper {
+  opacity: 0;
+  transition: 0s all linear;
+
+  .tool-item {
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #333;
+
+    :hover {
+      color: $secondaryColor;
+    }
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}

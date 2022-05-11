@@ -1,5 +1,4 @@
 .tools-wrapper {
-  opacity: 0;
   transition: 0s all linear;
 
   .tool-item {
@@ -12,6 +11,10 @@
       color: $secondaryColor;
     }
   }
+}
+
+.tools-hide {
+  opacity: 0;
 
   &:hover {
     opacity: 1;

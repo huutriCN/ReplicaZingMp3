@@ -31,9 +31,11 @@ const SongDescription = ({
             color={color}
           />
         </div>
-        <div className={styles["desc-tools"]}>
-          {showedTools && <DescriptionTools />}
-        </div>
+        {showedTools && (
+          <div className={styles["desc-tools"]}>
+            <DescriptionTools />
+          </div>
+        )}
       </div>
     </div>
   );

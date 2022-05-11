@@ -1,12 +1,60 @@
-@import "../../../../styles/mixins";
-
 .playlist-wrapper {
-  @include perfect-center;
+  position: relative;
+  padding: 20px;
+  background: url("/discover_background.png") center center / cover no-repeat;
+  font-family: $secondaryFont;
 
-  height: 100%;
-  background-color: #ed1c24;
-  font-size: 1rem;
-  font-weight: 500;
-  color: #fff;
-  text-transform: uppercase;
+  &-inner {
+    display: grid;
+    grid-template-columns: 90px 150px;
+    grid-column-gap: 10px;
+
+    .thumbnail-wrapper {
+      position: relative;
+      z-index: 99999;
+      cursor: pointer;
+
+      .playlist-thumbnail {
+        width: 90px;
+        height: 90px;
+      }
+
+      .playlist-icon {
+        @include absolute-center("both");
+
+        font-size: 40px;
+        color: #fff;
+      }
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    .playlist-intro {
+      z-index: 99999;
+      padding-top: 5px;
+
+      .intro-title a {
+        line-height: 20px;
+        font-weight: 700;
+      }
+
+      .intro-desc a {
+        font-size: 12px;
+        line-height: 1.5;
+      }
+    }
+
+    .playlist-mask {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      opacity: 0.6;
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+    }
+  }
 }

@@ -2,7 +2,8 @@ const path = require("path");
 
 module.exports = {
   stories: [
-    "../views/**/*.stories.@(js|jsx|ts|tsx)",
+    "../views/Home/mains/**/*.stories.@(js|jsx|ts|tsx)",
+    "../views/Home/*.stories.@(js|jsx|ts|tsx)",
     "../layouts/**/*.stories.@(js|jsx|ts|tsx)",
   ],
   addons: [

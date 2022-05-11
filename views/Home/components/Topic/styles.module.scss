@@ -1,10 +1,22 @@
 .topic-wrapper {
-  @include perfect-center;
+  .topic-title {
+    margin-bottom: 15px;
+    font-weight: 300;
+    font-size: 18px;
+    font-family: $primaryFont;
+    text-transform: uppercase;
+    color: $titleColor;
+  }
 
-  height: 100%;
-  background-color: #ff7f27;
-  font-size: 1rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #fff;
+  .topic-others {
+    color: #888;
+
+    &:hover {
+      color: $titleColor;
+    }
+  }
+
+  .topic-thumbnail {
+    padding-bottom: 15px;
+  }
 }

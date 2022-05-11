@@ -1,8 +1,19 @@
+/// components
+import ChartComponent from "../../components/ChartComponent";
+import RankingSong from "../../components/RankingSong";
+
+// mocks
+import data from "../../../../mocks/ChartRanking";
+
+// others
 import styles from "./styles.module.scss";
 
 const ChartRanking = () => (
   <div className={styles["ranking-wrapper"]}>
-    <div className={styles["ranking-wrapper-inner"]}>Chart Ranking</div>
+    <ChartComponent songList={data} />
+    {data.map((song, index) => (
+      <RankingSong key={song.title} rankingNumber={index} {...song} />
+    ))}
   </div>
 );
 

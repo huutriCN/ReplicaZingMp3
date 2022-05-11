@@ -4,9 +4,9 @@
 
   .component-desc {
     position: absolute;
+    z-index: 99999999;
     bottom: 0;
     width: 100%;
-    z-index: 99999999;
     padding-bottom: 10px;
     font-family: $secondaryFont;
     color: #fff;

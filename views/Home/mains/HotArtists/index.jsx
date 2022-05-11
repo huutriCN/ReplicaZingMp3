@@ -7,10 +7,11 @@ import data from "../../../../mocks/HotArtist";
 
 // others
 import styles from "./styles.module.scss";
+import dataSource from "../../../../dataSources/HotArtists";
 
 const HotArtists = () => (
   <div className={styles["artists-wrapper"]}>
-    <TitleComponent showedPlay={false} title="Nghệ Sĩ Hot" size="large" />
+    <TitleComponent showedPlay={false} title={dataSource.title} size="large" />
     <div className={styles["artists-wrapper-inner"]}>
       <div className={styles["artist-first"]}>
         <ArtistComponent {...data[0]} />

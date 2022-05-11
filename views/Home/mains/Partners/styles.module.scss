@@ -2,13 +2,28 @@
   grid-area: partners;
 
   &-inner {
-    @include perfect-center;
+    display: flex;
 
-    height: 100%;
-    background-color: #eb23e3;
-    text-transform: uppercase;
-    font-size: 1rem;
-    font-weight: 400;
-    color: #fff;
+    .partner-title {
+      width: 70px;
+      font-family: $secondaryFont;
+      line-height: 50px;
+      font-size: 16px;
+      color: #666;
+    }
+
+    .partner-list {
+      display: flex;
+      padding-left: 20px;
+
+      li {
+        margin-left: 10px;
+        border: 1px solid #dedede;
+
+        img {
+          width: 76px;
+        }
+      }
+    }
   }
 }

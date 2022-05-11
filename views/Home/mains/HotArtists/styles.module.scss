@@ -1,5 +1,15 @@
 .artists-wrapper {
   grid-area: hot-artists;
-  background-color: #e4f460;
-  color: #000;
+
+  &-inner {
+    display: grid;
+    grid-template-columns: 210px 430px;
+    grid-column-gap: 10px;
+
+    .artist-small {
+      display: grid;
+      grid-template: repeat(2, 100px) / repeat(4, 100px);
+      grid-gap: 10px;
+    }
+  }
 }

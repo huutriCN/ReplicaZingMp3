@@ -1,18 +1,20 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
-import {
-  DownloadOutlined,
-  PlusOutlined,
-  ShareAltOutlined,
-} from "@ant-design/icons";
+// libs
+import classNames from "classnames";
 
 // others
 import styles from "./styles.module.scss";
+import tools from "../../../../dataSources/DescriptionTools";
 
-const DescriptionTools = () => (
-  <div className={styles["tools-wrapper"]}>
-    <DownloadOutlined className={styles["tool-item"]} />
-    <PlusOutlined className={styles["tool-item"]} />
-    <ShareAltOutlined className={styles["tool-item"]} />
+const DescriptionTools = ({ display = false }) => (
+  <div
+    className={classNames({
+      [styles["tools-wrapper"]]: true,
+      [styles["tools-hide"]]: !display,
+    })}
+  >
+    {tools.map(({ Tool, title }) => (
+      <Tool key={title} className={styles["tool-item"]} />
+    ))}
   </div>
 );
 

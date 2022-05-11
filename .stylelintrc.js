@@ -5,7 +5,7 @@ module.exports = {
     "stylelint-config-prettier-scss",
   ],
   rules: {
-    "unit-allowed-list": ["em", "rem", "px", "%", "fr", "s"],
+    "unit-allowed-list": ["em", "rem", "px", "%", "fr", "s", "deg"],
     "no-empty-source": null,
     "block-no-empty": null,
     "custom-property-no-missing-var-function": true,

@@ -4,6 +4,9 @@ import ImageComponent from "../ImageComponent";
 /// others
 import styles from "./styles.module.scss";
 
+// eslint-disable-next-line import/order
+import { Button } from "antd";
+
 const Selection = ({ title, artist, imageWidth, imageHeight, thumbnail }) => (
   <div className={styles["selection-wrapper"]}>
     <ImageComponent
@@ -17,6 +20,9 @@ const Selection = ({ title, artist, imageWidth, imageHeight, thumbnail }) => (
     <h4 className={styles["selection-artist"]}>
       <a href="/home">{artist}</a>
     </h4>
+    <div>
+      <Button />
+    </div>
   </div>
 );
 

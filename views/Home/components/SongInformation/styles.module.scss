@@ -1,9 +1,13 @@
 .infor-wrapper {
   text-align: left;
 
-  .infor-name a {
-    line-height: 20px;
-    font-size: 14px;
+  .infor-name {
+    margin-bottom: 0;
+
+    a {
+      line-height: 20px;
+      font-size: 14px;
+    }
   }
 
   .infor-artists {
@@ -23,7 +27,7 @@
   }
 
   .infor-artists a {
-    color: #333;
+    color: #888;
   }
 
   a:hover {

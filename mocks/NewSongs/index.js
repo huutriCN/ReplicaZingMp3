@@ -59,6 +59,30 @@ const data = [
     thumbnail:
       "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/f/1/4/2/f1420c92f103db82464d108b740c9684.jpg",
   },
+  {
+    title: "Quay Lại Lại Yêu",
+    artistsNames: ["Ngô Kiến Huy", "Vương Anh Tú"],
+    thumbnail:
+      "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/thumb_video/c/2/8/a/c28abedb5c8664118a0cc5602bee5316.jpg",
+  },
+  {
+    title: "Anh luôn là lí do",
+    artistsNames: ["ERIK"],
+    thumbnail:
+      "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/thumb_video/f/a/7/4/fa742194c22e0eb6e933bae048cf0bc5.jpg",
+  },
+  {
+    title: "Đom Đóm",
+    artistsNames: ["Jack"],
+    thumbnail:
+      "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/thumb_video/8/0/1/c/801c0a9f296fd140a40f94ba3eae5e35.jpg",
+  },
+  {
+    title: "Người Tôi Yêu Chẳng Hề Yêu Tôi",
+    artistsNames: ["LyLy"],
+    thumbnail:
+      "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/thumb_video/2/3/8/f/238f493ba2ee78c79453ebe231513692.jpg",
+  },
 ];
 
 export default data;

@@ -14,7 +14,7 @@ const TodaySelection = () => (
     <div className={styles["selection-content"]}>
       {data.map((selectionItem) => (
         <Selection
-          key={selection.title}
+          key={selectionItem.title}
           imageWidth={selection.SELECTION_IMAGE_WIDTH}
           imageHeight={selection.SELECTION_IMAGE_HEIGHT}
           {...selectionItem}

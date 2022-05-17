@@ -21,7 +21,7 @@ const FooterSocials = () => (
       title="DCMA Protected"
       href="/home"
     >
-      <img src="/cert.png" alt="DCMA Certificate" />
+      <img src="cert.png" alt="DCMA Certificate" />
     </a>
     <div className={styles["social-versions"]}>
       <a title="Phiên bản mobile" href="/home">

@@ -1,7 +1,8 @@
 .playlist-wrapper {
   position: relative;
   padding: 20px;
-  background: url("/discover_background.png") center center / cover no-repeat;
+  background: url("../../../../public/discover_background.png") center center /
+    cover no-repeat;
   font-family: $secondaryFont;
 
   &-inner {

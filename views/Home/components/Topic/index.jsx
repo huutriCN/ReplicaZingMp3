@@ -10,7 +10,7 @@ const Topic = ({ topicTitle }) => (
     <h2 className={styles["topic-title"]}>{topicTitle}</h2>
     <a href="/home">
       <img
-        src="/today_selection.jpg"
+        src="today_selection.jpg"
         alt=""
         className={styles["topic-thumbnail"]}
       />

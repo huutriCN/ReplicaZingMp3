@@ -8,7 +8,6 @@ const navbars = {
       itemType: IconItem,
       id: 1,
       properties: {
-        itemTitle: "Zing MP3",
         link: "/home",
       },
     },
@@ -16,7 +15,7 @@ const navbars = {
       itemType: TitleItem,
       id: 2,
       properties: {
-        itemTitle: "Nhạc Cá Nhân",
+        title: "Navbar.menu.PersonalMusic",
         link: "/home",
       },
     },
@@ -30,7 +29,7 @@ const navbars = {
       id: 3,
       properties: {
         link: "/home",
-        itemTitle: "#zingChart",
+        title: "Navbar.menu.chart",
         dropdownItems: [
           {
             columnTitle: "#zingchart",
@@ -118,7 +117,7 @@ const navbars = {
       itemType: TitleItem,
       id: 4,
       properties: {
-        itemTitle: "Top 100",
+        title: "Navbar.menu.Top100",
         link: "/home",
         dropdownItems: [
           {
@@ -154,7 +153,7 @@ const navbars = {
       itemType: TitleItem,
       id: 5,
       properties: {
-        itemTitle: "Chủ Đề",
+        title: "Navbar.menu.Topic",
         link: "/home",
         dropdownItems: [
           {
@@ -293,7 +292,7 @@ const navbars = {
       itemType: TitleItem,
       id: 6,
       properties: {
-        itemTitle: "Video",
+        title: "Navbar.menu.Video",
         link: "/home",
         dropdownItems: [
           {
@@ -452,7 +451,7 @@ const navbars = {
       itemType: TitleItem,
       id: 7,
       properties: {
-        itemTitle: "Album",
+        title: "Navbar.menu.Album",
         link: "/home",
         dropdownItems: [
           {
@@ -611,7 +610,7 @@ const navbars = {
       itemType: TitleItem,
       id: 8,
       properties: {
-        itemTitle: "Nghệ Sĩ",
+        title: "Navbar.menu.Artist",
         link: "/home",
         dropdownItems: [
           {
@@ -662,7 +661,7 @@ const navbars = {
       itemType: TitleItem,
       id: 9,
       properties: {
-        itemTitle: "VIP",
+        title: "Navbar.menu.VIP",
         link: "/home",
         dropdownItems: [
           {
@@ -685,6 +684,10 @@ const navbars = {
       },
     },
   ],
+  langItem: {
+    langChecked: "vi",
+    langUnchecked: "en",
+  },
 };
 
 export default navbars;

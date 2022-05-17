@@ -19,8 +19,12 @@
         font-weight: 500;
       }
 
-      .song-title a {
-        font-size: 12px;
+      .song-title {
+        margin-bottom: 0;
+
+        a {
+          font-size: 12px;
+        }
       }
 
       .song-artist a {

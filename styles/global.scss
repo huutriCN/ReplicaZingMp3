@@ -1,14 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Roboto&display=swap");
 
 html,
 body {
   background-color: #f2f2f2;
-  font-size:14px; 
+  font-size: 14px;
   line-height: 1;
   color: #333;
 }
 
 a {
+  font-family: $secondaryFont;
   display: block;
   text-decoration: none;
   font-weight: 300;
@@ -24,6 +25,7 @@ img {
   box-sizing: border-box;
 }
 
-ul{
+ul {
   list-style-type: none;
+  margin-bottom: 0;
 }

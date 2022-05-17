@@ -1,5 +1,6 @@
 import * as NextImage from "next/image";
 import "../styles/reset.css";
+import "antd/dist/antd.css";
 import "../styles/global.scss";
 
 const OriginalNextImage = NextImage.default;

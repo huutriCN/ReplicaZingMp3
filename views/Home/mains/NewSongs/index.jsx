@@ -15,7 +15,7 @@ import NewSong from "../../../../dataSources/NewSongs";
 const NewSongs = () => {
   const [isHover, setIsHover] = useState(false);
 
-  const { currentPage, onHandleChange } = usePagination({
+  const { currentPage, onHandleChange, start, end } = usePagination({
     total: data.length,
     itemPerPage: NewSong.TOTAL_ITEM_PER_PAGE,
     isHover,
@@ -29,20 +29,14 @@ const NewSongs = () => {
     >
       <div className={styles["session-wrapper-inner"]}>
         <TitleComponent showedPlay={false} title={NewSong.title} size="large" />
-        {data
-          .slice(
-            (currentPage - 1) * NewSong.TOTAL_ITEM_PER_PAGE,
-            (currentPage - 1) * NewSong.TOTAL_ITEM_PER_PAGE +
-              NewSong.TOTAL_ITEM_PER_PAGE,
-          )
-          .map((song) => (
-            <VPopComponent
-              key={song.title}
-              imageWidth={NewSong.NEWS_IMAGE_WIDTH}
-              imageHeight={NewSong.NEWS_IMAGE_HEIGHT}
-              {...song}
-            />
-          ))}
+        {data.slice(start, end).map((song) => (
+          <VPopComponent
+            key={song.title}
+            imageWidth={NewSong.NEWS_IMAGE_WIDTH}
+            imageHeight={NewSong.NEWS_IMAGE_HEIGHT}
+            {...song}
+          />
+        ))}
         <div className={styles["session-pagination"]}>
           <Pagination
             simple

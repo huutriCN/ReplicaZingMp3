@@ -1,4 +1,8 @@
+// components
 import * as NextImage from "next/image";
+// context
+import { ProvideLocale } from "../contexts/LocaleContext";
+// others
 import "../styles/reset.css";
 import "antd/dist/antd.css";
 import "../styles/global.scss";
@@ -26,3 +30,11 @@ export const parameters = {
     },
   },
 };
+
+export const decorators = [
+  (Story) => (
+    <ProvideLocale>
+      <Story />
+    </ProvideLocale>
+  ),
+];

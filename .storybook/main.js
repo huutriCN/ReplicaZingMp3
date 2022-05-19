@@ -20,4 +20,12 @@ module.exports = {
     builder: "@storybook/builder-webpack5",
   },
   staticDirs: ["../public"],
+  webpackFinal: async (config, { configType }) => {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      "@": path.resolve(__dirname, "../"),
+    };
+
+    return config;
+  },
 };

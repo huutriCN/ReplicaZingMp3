@@ -3,7 +3,7 @@ import classNames from "classnames";
 
 // others
 import styles from "./styles.module.scss";
-import tools from "../../../../dataSources/DescriptionTools";
+import tools from "@/dataSources/DescriptionTools";
 
 const DescriptionTools = ({ display = false }) => (
   <div

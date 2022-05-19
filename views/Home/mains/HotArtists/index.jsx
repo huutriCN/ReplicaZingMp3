@@ -3,11 +3,11 @@ import TitleComponent from "../../components/TitleComponent";
 import ArtistComponent from "../../components/ArtistComponent";
 
 // mocks
-import data from "../../../../mocks/HotArtist";
+import data from "@/mocks/HotArtist";
 
 // others
 import styles from "./styles.module.scss";
-import dataSource from "../../../../dataSources/HotArtists";
+import dataSource from "@/dataSources/HotArtists";
 
 const HotArtists = () => (
   <div className={styles["artists-wrapper"]}>

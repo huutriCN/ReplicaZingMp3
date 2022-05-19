@@ -4,11 +4,11 @@ import NewsComponent from "../../components/NewsComponent";
 import ImageCoverComponent from "../../components/ImageCoverComponent";
 
 // mocks
-import data from "../../../../mocks/News";
+import data from "@/mocks/News";
 
 // others
 import styles from "./styles.module.scss";
-import newDS from "../../../../dataSources/News";
+import newDS from "@/dataSources/News";
 
 const News = () => (
   <div className={styles["news-wrapper"]}>

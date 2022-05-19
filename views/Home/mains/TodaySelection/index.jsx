@@ -4,12 +4,12 @@ import { Pagination } from "antd";
 // components
 import Selection from "../../components/Selection";
 // mocks
-import data from "../../../../mocks/TodaySelection";
+import data from "@/mocks/TodaySelection";
 // hooks
 import usePagination from "../../../../hooks/usePagination";
 // others
 import styles from "./styles.module.scss";
-import selection from "../../../../dataSources/TodaySelection";
+import selection from "@/dataSources/TodaySelection";
 
 const TodaySelection = () => {
   const [isHover, setIsHover] = useState(false);

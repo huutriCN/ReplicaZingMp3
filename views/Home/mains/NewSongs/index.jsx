@@ -5,12 +5,12 @@ import { Pagination } from "antd";
 import TitleComponent from "../../components/TitleComponent";
 import VPopComponent from "../../components/VPopComponent";
 // hooks
-import usePagination from "../../../../hooks/usePagination";
+import usePagination from "@/hooks/usePagination";
 /// mocks
-import data from "../../../../mocks/NewSongs";
+import data from "@/mocks/NewSongs";
 // others
 import styles from "./styles.module.scss";
-import NewSong from "../../../../dataSources/NewSongs";
+import NewSong from "@/dataSources/NewSongs";
 
 const NewSongs = () => {
   const [isHover, setIsHover] = useState(false);

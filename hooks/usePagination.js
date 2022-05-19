@@ -6,11 +6,21 @@ import KEYCODE from "../constants/KeyCode";
 const usePagination = ({ total, itemPerPage, isHover }) => {
   const [currentPage, setCurrentPage] = useState(1);
 
-  const start = (currentPage - 1) * itemPerPage;
-  const end = (currentPage - 1) * itemPerPage + itemPerPage;
+  let start;
+  let end;
+  if (total && itemPerPage) {
+    start = (currentPage - 1) * itemPerPage;
+    end = (currentPage - 1) * itemPerPage + itemPerPage;
+  }
 
   const onHandleChange = (page) => {
-    setCurrentPage(page);
+    if (!Number.isNaN(page)) {
+      if (page > total / itemPerPage) {
+        setCurrentPage(total / itemPerPage);
+      } else {
+        setCurrentPage(page);
+      }
+    }
   };
 
   useEffect(() => {

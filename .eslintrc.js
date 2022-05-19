@@ -2,6 +2,7 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    "jest/globals": true,
   },
   extends: [
     "next",
@@ -17,7 +18,7 @@ module.exports = {
     ecmaVersion: 6,
     sourceType: "module",
   },
-  plugins: ["react", "prettier"],
+  plugins: ["react", "jest", "prettier"],
   rules: {
     "react/function-component-definition": [
       2,

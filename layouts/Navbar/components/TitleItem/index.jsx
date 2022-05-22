@@ -1,5 +1,7 @@
-import styles from "./styles.module.scss";
+// components
 import DropdownMenu from "../DropdownMenu";
+// others
+import styles from "./styles.module.scss";
 
 const TitleItem = ({ id, itemTitle, link, dropdownItems }) => (
   <li key={id} className={styles["item-wrapper"]}>

@@ -1,4 +1,6 @@
+// libs
 import classNames from "classnames";
+// others
 import styles from "./styles.module.scss";
 import headers from "../../dataSources/Header";
 

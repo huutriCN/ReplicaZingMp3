@@ -5,11 +5,11 @@ import ImageCoverComponent from "../../components/ImageCoverComponent";
 import SongDescription from "../../components/SongDescription";
 
 // mocks
-import data from "../../../../mocks/WeelySongRanking";
+import data from "@/mocks/WeelySongRanking";
 
 // others
 import styles from "./styles.module.scss";
-import ranking from "../../../../dataSources/WeeklySongRanking";
+import ranking from "@/dataSources/WeeklySongRanking";
 
 const WeeklySongRanking = () => (
   <div className={styles["ranking-wrapper"]}>

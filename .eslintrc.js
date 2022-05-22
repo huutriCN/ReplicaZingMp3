@@ -7,6 +7,7 @@ module.exports = {
   extends: [
     "next",
     "plugin:react/recommended",
+    "plugin:import/recommended",
     "airbnb",
     "plugin:storybook/recommended",
     "eslint-config-prettier",
@@ -18,7 +19,7 @@ module.exports = {
     ecmaVersion: 6,
     sourceType: "module",
   },
-  plugins: ["react", "jest", "prettier"],
+  plugins: ["react", "import", "jest", "prettier"],
   rules: {
     "react/function-component-definition": [
       2,
@@ -27,6 +28,16 @@ module.exports = {
         unnamedComponents: "arrow-function",
       },
     ],
+    "import/no-unresolved": [
+      2,
+      {
+        commonjs: true,
+        amd: true,
+        caseSensitiveStrict: true,
+        caseSensitive: true,
+      },
+    ],
+    "import/order": 0,
     "linebreak-style": 0,
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",
@@ -44,5 +55,12 @@ module.exports = {
         peerDependencies: true,
       },
     ],
+  },
+  settings: {
+    "import/resolver": {
+      alias: {
+        map: [["@", "./"]],
+      },
+    },
   },
 };

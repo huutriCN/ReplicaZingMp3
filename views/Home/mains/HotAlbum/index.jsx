@@ -3,10 +3,10 @@ import TitleComponent from "../../components/TitleComponent";
 import AlbumComponent from "../../components/AlbumComponent";
 
 // mocks
-import data from "../../../../mocks/HotAlbum";
+import data from "@/mocks/HotAlbum";
 
 /// others
-import tracking from "../../../../dataSources/HotAlbum";
+import tracking from "@/dataSources/HotAlbum";
 import styles from "./styles.module.scss";
 
 const HotALbum = () => (

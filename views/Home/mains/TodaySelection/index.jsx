@@ -6,7 +6,7 @@ import Selection from "../../components/Selection";
 // mocks
 import data from "@/mocks/TodaySelection";
 // hooks
-import usePagination from "../../../../hooks/usePagination";
+import usePagination from "@/hooks/usePagination";
 // others
 import styles from "./styles.module.scss";
 import selection from "@/dataSources/TodaySelection";

@@ -1,6 +1,6 @@
 // others
 import styles from "./styles.module.scss";
-import navbars from "../../../../dataSources/Navbar";
+import navbars from "@/dataSources/Navbar";
 
 const NavbarMenu = () => (
   <ul className={styles["menu-wrapper"]}>

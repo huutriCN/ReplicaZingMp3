@@ -3,7 +3,7 @@ import ChartComponent from "../../components/ChartComponent";
 import RankingSong from "../../components/RankingSong";
 
 // mocks
-import data from "../../../../mocks/ChartRanking";
+import data from "@/mocks/ChartRanking";
 
 // others
 import styles from "./styles.module.scss";

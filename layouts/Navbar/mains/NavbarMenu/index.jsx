@@ -2,7 +2,7 @@
 import { useLocale } from "../../../../contexts/LocaleContext";
 // others
 import styles from "./styles.module.scss";
-import navbars from "../../../../dataSources/Navbar";
+import navbars from "@/dataSources/Navbar";
 
 const NavbarMenu = () => {
   const { localeDataSource } = useLocale();

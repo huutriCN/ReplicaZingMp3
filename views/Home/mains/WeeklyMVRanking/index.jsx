@@ -5,11 +5,11 @@ import ImageCoverComponent from "../../components/ImageCoverComponent";
 import MVDescription from "../../components/MVDescription";
 
 // mocks
-import data from "../../../../mocks/WeeklyMVRanking";
+import data from "@/mocks/WeeklyMVRanking";
 
 // others
 import styles from "./styles.module.scss";
-import ranking from "../../../../dataSources/WeeklyMVRanking";
+import ranking from "@/dataSources/WeeklyMVRanking";
 
 const WeeklyMVRanking = () => (
   <div className={styles["ranking-wrapper"]}>

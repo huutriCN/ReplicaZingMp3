@@ -3,10 +3,10 @@ import TitleComponent from "../../components/TitleComponent";
 import VideoComponent from "../../components/VideoComponent";
 
 // mocks
-import data from "../../../../mocks/HotVideo";
+import data from "@/mocks/HotVideo";
 
 /// others
-import tracking from "../../../../dataSources/HotVideo";
+import tracking from "@/dataSources/HotVideo";
 import styles from "./styles.module.scss";
 
 const HotVideo = () => (

@@ -1,5 +1,5 @@
 /// mocks
-import data from "../../../../mocks/Partners";
+import data from "@/mocks/Partners";
 
 // others
 import styles from "./styles.module.scss";

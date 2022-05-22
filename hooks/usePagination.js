@@ -8,13 +8,15 @@ const usePagination = ({ total, itemPerPage, isHover }) => {
 
   let start;
   let end;
+
   if (total && itemPerPage) {
     start = (currentPage - 1) * itemPerPage;
     end = (currentPage - 1) * itemPerPage + itemPerPage;
   }
 
   const onHandleChange = (page) => {
-    if (!Number.isNaN(page)) {
+    // eslint-disable-next-line no-restricted-globals
+    if (!isNaN(page)) {
       if (page > total / itemPerPage) {
         setCurrentPage(total / itemPerPage);
       } else {

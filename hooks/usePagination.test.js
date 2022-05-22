@@ -5,7 +5,7 @@ import { act, renderHook } from "@testing-library/react-hooks";
 import usePagination from "./usePagination";
 
 describe("Test Pagination", () => {
-  it("has valid Total", () => {
+  it("should return valid result", () => {
     // arrange
     const total = 50;
     const itemPerPage = 10;
@@ -19,14 +19,12 @@ describe("Test Pagination", () => {
       }),
     );
 
-    const { start, end } = result.current;
-
     // assertion
-    expect(start).toEqual(0);
-    expect(end).toEqual(10);
+    expect(result.current.start).toEqual(0);
+    expect(result.current.end).toEqual(10);
   });
 
-  it("has invalid TotalItem", () => {
+  it("should return undifined", () => {
     // arrange
     const itemPerPage = 10;
 
@@ -38,14 +36,12 @@ describe("Test Pagination", () => {
       }),
     );
 
-    const { start, end } = result.current;
-
     // assertion
-    expect(start).toEqual(undefined);
-    expect(end).toEqual(undefined);
+    expect(result.current.start).toEqual(undefined);
+    expect(result.current.end).toEqual(undefined);
   });
 
-  it("has invalid ItemPerPage", () => {
+  it("should return undifined", () => {
     // arrange
     const total = 50;
 
@@ -57,14 +53,12 @@ describe("Test Pagination", () => {
       }),
     );
 
-    const { start, end } = result.current;
-
     // assertion
-    expect(start).toEqual(undefined);
-    expect(end).toEqual(undefined);
+    expect(result.current.start).toEqual(undefined);
+    expect(result.current.end).toEqual(undefined);
   });
 
-  it("has valid result after increasing currentPage", () => {
+  it("should move to next Page", () => {
     // arrange
     const total = 50;
     const itemPerPage = 10;
@@ -82,14 +76,12 @@ describe("Test Pagination", () => {
       result.current.onHandleChange(result.current.currentPage + 1);
     });
 
-    const { start, end } = result.current;
-
     // assertion
-    expect(start).toEqual(10);
-    expect(end).toEqual(20);
+    expect(result.current.start).toEqual(10);
+    expect(result.current.end).toEqual(20);
   });
 
-  it("has invalid SetCurrentPage", () => {
+  it("should move to specific page", () => {
     // arrange
     const total = 50;
     const itemPerPage = 10;
@@ -107,14 +99,12 @@ describe("Test Pagination", () => {
       result.current.onHandleChange(6);
     });
 
-    const { start, end } = result.current;
-
     // assertion
-    expect(start).toEqual(40);
-    expect(end).toEqual(50);
+    expect(result.current.start).toEqual(40);
+    expect(result.current.end).toEqual(50);
   });
 
-  it("has undefined SetCurrentPage", () => {
+  it("should not move to invalid page", () => {
     // arrange
     const total = 50;
     const itemPerPage = 10;
@@ -132,10 +122,8 @@ describe("Test Pagination", () => {
       result.current.onHandleChange("Not a number");
     });
 
-    const { start, end } = result.current;
-
     // assertion
-    expect(start).toEqual(0);
-    expect(end).toEqual(10);
+    expect(result.current.start).toEqual(0);
+    expect(result.current.end).toEqual(10);
   });
 });

@@ -1,13 +1,11 @@
 // libs
 import { createContext, useContext, useMemo } from "react";
 // hooks
-import useLocalStorage from "../hooks/useLocalStorage";
-// locales
-import locales from "../locales";
+import useLocalStorage from "@/hooks/useLocalStorage";
 
 const LocaleContext = createContext();
 
-export const ProvideLocale = ({ children }) => {
+export const ProvideLocale = ({ children, locales }) => {
   const [locale, setLocale] = useLocalStorage("locale", "vi");
 
   const value = useMemo(

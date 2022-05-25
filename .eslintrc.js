@@ -3,6 +3,7 @@ module.exports = {
     browser: true,
     es2021: true,
     "jest/globals": true,
+    "cypress/globals": true,
   },
   extends: [
     "next",
@@ -10,6 +11,7 @@ module.exports = {
     "plugin:import/recommended",
     "airbnb",
     "plugin:storybook/recommended",
+    "plugin:cypress/recommended",
     "eslint-config-prettier",
   ],
   parserOptions: {
@@ -19,7 +21,7 @@ module.exports = {
     ecmaVersion: 6,
     sourceType: "module",
   },
-  plugins: ["react", "import", "jest", "prettier"],
+  plugins: ["react", "import", "jest", "prettier", "cypress"],
   rules: {
     "react/function-component-definition": [
       2,

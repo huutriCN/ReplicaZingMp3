@@ -1,8 +1,11 @@
 // libs
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Pagination } from "antd";
 // components
 import Selection from "../../components/Selection";
+// actions
+import { fetchTodaySelection } from "@/redux/actions/TodaySelection.action";
 // mocks
 import data from "@/mocks/TodaySelection";
 // hooks
@@ -13,6 +16,14 @@ import selection from "@/dataSources/TodaySelection";
 
 const TodaySelection = () => {
   const [isHover, setIsHover] = useState(false);
+  const dispatch = useDispatch();
+  const todaySelection = useSelector(
+    (state) => state.todaySelectionReducer.todaySelection,
+  );
+
+  useEffect(() => {
+    dispatch(fetchTodaySelection(data));
+  }, []);
 
   const { currentPage, onHandleChange, start, end } = usePagination({
     total: data.length,
@@ -28,7 +39,7 @@ const TodaySelection = () => {
     >
       <h3 className={styles["selection-title"]}>{selection.title}</h3>
       <div className={styles["selection-content"]}>
-        {data.slice(start, end).map((selectionItem) => (
+        {todaySelection.slice(start, end).map((selectionItem) => (
           <Selection
             key={selectionItem.title}
             imageWidth={selection.SELECTION_IMAGE_WIDTH}

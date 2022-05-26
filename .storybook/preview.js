@@ -2,6 +2,8 @@
 import * as NextImage from "next/image";
 // context
 import { ProvideLocale } from "../contexts/LocaleContext";
+// locales
+import locales from "@/locales/index";
 // others
 import "../styles/reset.css";
 import "antd/dist/antd.css";
@@ -33,7 +35,7 @@ export const parameters = {
 
 export const decorators = [
   (Story) => (
-    <ProvideLocale>
+    <ProvideLocale locales={locales}>
       <Story />
     </ProvideLocale>
   ),

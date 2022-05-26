@@ -19,7 +19,7 @@ const HotVideo = () => {
 
   useEffect(() => {
     dispatch(fetchHotVideo(data));
-  });
+  }, []);
 
   return (
     <div className={styles["tracking-wrapper"]}>

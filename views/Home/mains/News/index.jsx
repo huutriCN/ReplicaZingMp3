@@ -19,7 +19,7 @@ const News = () => {
 
   useEffect(() => {
     dispatch(fetchNews(data));
-  });
+  }, []);
 
   return (
     <div className={styles["news-wrapper"]}>

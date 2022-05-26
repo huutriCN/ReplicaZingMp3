@@ -14,7 +14,7 @@ const Partners = () => {
 
   useEffect(() => {
     dispatch(fetchPartners(data));
-  });
+  }, []);
 
   return (
     <div className={styles["partner-wrapper"]}>

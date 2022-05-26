@@ -20,7 +20,7 @@ const WeeklyMVRanking = () => {
 
   useEffect(() => {
     dispatch(fetchMVRanking(data));
-  });
+  }, []);
 
   return (
     <div className={styles["ranking-wrapper"]}>

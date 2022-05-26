@@ -27,7 +27,7 @@ const NewSongs = () => {
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
     >
-      <div className={styles["session-wrapper-inner"]}>
+      <div className={styles["session-wrapper-inner"]} id="news">
         <TitleComponent showedPlay={false} title={NewSong.title} size="large" />
         {data.slice(start, end).map((song) => (
           <VPopComponent

@@ -1,6 +1,8 @@
-// components
+// libs
+import { Provider } from "react-redux";
 import * as NextImage from "next/image";
 // context
+import wrapper, { configureStore } from "../redux/store";
 import { ProvideLocale } from "../contexts/LocaleContext";
 // locales
 import locales from "@/locales/index";
@@ -10,6 +12,7 @@ import "antd/dist/antd.css";
 import "../styles/global.scss";
 
 const OriginalNextImage = NextImage.default;
+const store = configureStore();
 
 Object.defineProperty(NextImage, "default", {
   configurable: true,
@@ -36,7 +39,9 @@ export const parameters = {
 export const decorators = [
   (Story) => (
     <ProvideLocale locales={locales}>
-      <Story />
+      <Provider store={store}>
+        <Story />
+      </Provider>
     </ProvideLocale>
   ),
 ];

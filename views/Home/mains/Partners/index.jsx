@@ -1,6 +1,5 @@
-// libs
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+// hooks
+import useSelect from "@/hooks/useSelect";
 // actions
 import { fetchPartners } from "@/redux/actions/Partners.action";
 /// mocks
@@ -9,12 +8,11 @@ import data from "@/mocks/Partners";
 import styles from "./styles.module.scss";
 
 const Partners = () => {
-  const dispatch = useDispatch();
-  const partners = useSelector((state) => state.partnersReducer.partners);
-
-  useEffect(() => {
-    dispatch(fetchPartners(data));
-  }, []);
+  const partners = useSelect(
+    fetchPartners,
+    (state) => state.partnersReducer.partners,
+    data,
+  );
 
   return (
     <div className={styles["partner-wrapper"]}>

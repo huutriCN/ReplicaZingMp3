@@ -1,9 +1,8 @@
-// libs
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
 // components
 import TitleComponent from "../../components/TitleComponent";
 import ArtistComponent from "../../components/ArtistComponent";
+// hooks
+import useSelect from "@/hooks/useSelect";
 // actions
 import { fetchHotArtist } from "@/redux/actions/HotArtist.action";
 // mocks
@@ -13,12 +12,11 @@ import styles from "./styles.module.scss";
 import dataSource from "@/dataSources/HotArtists";
 
 const HotArtists = () => {
-  const dispatch = useDispatch();
-  const hotArtists = useSelector((state) => state.hotArtistReducer.hotArtists);
-
-  useEffect(() => {
-    dispatch(fetchHotArtist(data));
-  }, []);
+  const hotArtists = useSelect(
+    fetchHotArtist,
+    (state) => state.hotArtistReducer.hotArtists,
+    data,
+  );
 
   return (
     <div className={styles["hot-artists-wrapper"]}>

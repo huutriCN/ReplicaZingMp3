@@ -1,9 +1,8 @@
-// libs
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
 /// components
 import ChartComponent from "../../components/ChartComponent";
 import RankingSong from "../../components/RankingSong";
+// hooks
+import useSelect from "@/hooks/useSelect";
 // actions
 import { fetchChartRanking } from "@/redux/actions/ChartRanking.action";
 // mocks
@@ -12,14 +11,11 @@ import data from "@/mocks/ChartRanking";
 import styles from "./styles.module.scss";
 
 const ChartRanking = () => {
-  const dispatch = useDispatch();
-  const rankingSong = useSelector(
+  const rankingSong = useSelect(
+    fetchChartRanking,
     (state) => state.chartRankingReducer.rankingSong,
+    data,
   );
-
-  useEffect(() => {
-    dispatch(fetchChartRanking(data));
-  }, []);
 
   return (
     <div className={styles["chart-ranking-wrapper"]}>

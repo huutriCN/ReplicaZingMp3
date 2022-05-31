@@ -1,11 +1,10 @@
-// libs
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
 // components
 import TabComponent from "../../components/TabComponent";
 import TitleComponent from "../../components/TitleComponent";
 import ImageCoverComponent from "../../components/ImageCoverComponent";
 import AlbumDesciption from "../../components/AlbumDescription";
+// hooks
+import useSelect from "@/hooks/useSelect";
 // actions
 import { fetchWeeklyAlbumRanking } from "@/redux/actions/WeeklyAlbumRanking.action";
 // mocks
@@ -15,18 +14,11 @@ import styles from "./styles.module.scss";
 import ranking from "@/dataSources/WeeklyAlbumRanking";
 
 const WeeklyAlbumRanking = () => {
-  const dispatch = useDispatch();
-  const rankingAlbum = useSelector(
+  const rankingAlbum = useSelect(
+    fetchWeeklyAlbumRanking,
     (state) => state.rankingAlbumReducer.rankingAlbum,
+    data,
   );
-
-  useEffect(() => {
-    dispatch(fetchWeeklyAlbumRanking(data));
-  }, []);
-
-  useEffect(() => {
-    console.log(rankingAlbum);
-  });
 
   return (
     <div className={styles["weekly-album-ranking-wrapper"]}>

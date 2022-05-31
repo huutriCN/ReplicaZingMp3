@@ -6,7 +6,7 @@ import styles from "./styles.module.scss";
 import topic from "@/dataSources/HotTopic";
 
 const HotTopic = () => (
-  <div className={styles["topic-wrapper"]}>
+  <div className={styles["hot-topic-wrapper"]}>
     <Topic topicTitle={topic.topicTitle} />
   </div>
 );

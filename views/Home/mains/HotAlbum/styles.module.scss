@@ -1,7 +1,7 @@
-.album-wrapper {
+.hot-album-wrapper {
   grid-area: hot-album;
 
-  .content-wrapper {
+  &-inner {
     display: grid;
     grid-template-columns: repeat(4, 151px);
     grid-gap: 25px 15px;

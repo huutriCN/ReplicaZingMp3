@@ -19,12 +19,12 @@ const SongDescription = ({
   const descStyle = className || styles.normal;
 
   return (
-    <div className={classNames(styles["desc-wrapper"], descStyle)}>
-      <div className={styles["desc-wrapper-inner"]}>
-        <div className={styles["desc-ranking"]}>
+    <div className={classNames(styles["song-desc-wrapper"], descStyle)}>
+      <div className={styles["song-desc-wrapper-inner"]}>
+        <div className={styles["song-desc-ranking"]}>
           <p>{rankingNumber < 10 ? `0${rankingNumber}` : rankingNumber}</p>
         </div>
-        <div className={styles["desc-content"]}>
+        <div className={styles["song-desc-content"]}>
           <SongInfomation
             title={title}
             artistsNames={artistsNames}
@@ -32,7 +32,7 @@ const SongDescription = ({
           />
         </div>
         {showedTools && (
-          <div className={styles["desc-tools"]}>
+          <div className={styles["song-desc-tools"]}>
             <DescriptionTools />
           </div>
         )}

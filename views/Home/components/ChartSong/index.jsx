@@ -12,8 +12,8 @@ const ChartSong = ({
   rankingNumber,
   percent,
 }) => (
-  <div className={styles["song-wrapper"]}>
-    <div className={styles["song-wrapper-inner"]}>
+  <div className={styles["chart-song-wrapper"]}>
+    <div className={styles["chart-song-wrapper-inner"]}>
       <NumberComponent rankingNumber={rankingNumber} />
       <ImageComponent
         imageHeight="30px"

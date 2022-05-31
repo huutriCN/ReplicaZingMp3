@@ -22,9 +22,9 @@ const HotALbum = () => {
   }, []);
 
   return (
-    <div className={styles["album-wrapper"]}>
+    <div className={styles["hot-album-wrapper"]}>
       <TitleComponent showedPlay={false} title={tracking.title} size="large" />
-      <div className={styles["content-wrapper"]}>
+      <div className={styles["hot-album-wrapper-inner"]}>
         {hotAlbum.map((albumItem) => (
           <AlbumComponent
             key={albumItem.title}

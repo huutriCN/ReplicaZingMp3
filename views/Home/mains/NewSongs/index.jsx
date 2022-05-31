@@ -32,11 +32,11 @@ const NewSongs = () => {
 
   return (
     <div
-      className={styles["session-wrapper"]}
+      className={styles["new-songs-wrapper"]}
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
     >
-      <div className={styles["session-wrapper-inner"]} id="news">
+      <div className={styles["new-songs-wrapper-inner"]} id="news">
         <TitleComponent showedPlay={false} title={NewSong.title} size="large" />
         {newSongs.slice(start, end).map((song) => (
           <VPopComponent
@@ -46,7 +46,7 @@ const NewSongs = () => {
             {...song}
           />
         ))}
-        <div className={styles["session-pagination"]}>
+        <div className={styles["new-songs-pagination"]}>
           <Pagination
             simple
             onChange={onHandleChange}

@@ -1,10 +1,10 @@
-.session-wrapper {
+.new-songs-wrapper {
   position: relative;
   grid-area: new-songs;
   padding-left: 12px;
   border-left: 1px solid #dedede;
 
-  .session-pagination {
+  .new-songs-pagination {
     @include absolute-center("left");
 
     bottom: 0;

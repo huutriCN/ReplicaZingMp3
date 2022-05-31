@@ -23,7 +23,7 @@ const WeeklyMVRanking = () => {
   }, []);
 
   return (
-    <div className={styles["ranking-wrapper"]}>
+    <div className={styles["weekly-mv-ranking-wrapper"]}>
       <TitleComponent title={ranking.title} showedPlay={ranking.showedPlay} />
       <TabComponent
         tabList={ranking.tabList}

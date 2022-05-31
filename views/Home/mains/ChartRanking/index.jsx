@@ -22,7 +22,7 @@ const ChartRanking = () => {
   }, []);
 
   return (
-    <div className={styles["ranking-wrapper"]}>
+    <div className={styles["chart-ranking-wrapper"]}>
       <ChartComponent songList={rankingSong} />
       {rankingSong.map((song, index) => (
         <RankingSong key={song.title} rankingNumber={index} {...song} />

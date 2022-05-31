@@ -33,12 +33,12 @@ const TodaySelection = () => {
 
   return (
     <div
-      className={styles["selection-wrapper"]}
+      className={styles["today-selection-wrapper"]}
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
     >
-      <h3 className={styles["selection-title"]}>{selection.title}</h3>
-      <div className={styles["selection-content"]}>
+      <h3 className={styles["today-selection-title"]}>{selection.title}</h3>
+      <div className={styles["today-selection-content"]}>
         {todaySelection.slice(start, end).map((selectionItem) => (
           <Selection
             key={selectionItem.title}
@@ -48,7 +48,7 @@ const TodaySelection = () => {
           />
         ))}
       </div>
-      <div className={styles["selection-paginate"]}>
+      <div className={styles["today-selection-paginate"]}>
         <Pagination
           onChange={onHandleChange}
           current={currentPage}

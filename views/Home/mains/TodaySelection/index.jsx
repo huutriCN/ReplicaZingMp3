@@ -1,35 +1,33 @@
 // libs
-import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useState } from "react";
 import { Pagination } from "antd";
 // components
 import Selection from "../../components/Selection";
+// hooks
+import useSelect from "@/hooks/useSelect";
+import usePagination from "@/hooks/usePagination";
 // actions
 import { fetchTodaySelection } from "@/redux/actions/TodaySelection.action";
 // mocks
 import data from "@/mocks/TodaySelection";
-// hooks
-import usePagination from "@/hooks/usePagination";
 // others
 import styles from "./styles.module.scss";
 import selection from "@/dataSources/TodaySelection";
 
 const TodaySelection = () => {
   const [isHover, setIsHover] = useState(false);
-  const dispatch = useDispatch();
-  const todaySelection = useSelector(
-    (state) => state.todaySelectionReducer.todaySelection,
-  );
-
-  useEffect(() => {
-    dispatch(fetchTodaySelection(data));
-  }, []);
 
   const { currentPage, onHandleChange, start, end } = usePagination({
     total: data.length,
     itemPerPage: selection.TOTAL_ITEM_PER_PAGE,
     isHover,
   });
+
+  const todaySelection = useSelect(
+    fetchTodaySelection,
+    (state) => state.todaySelectionReducer.todaySelection,
+    data,
+  );
 
   return (
     <div

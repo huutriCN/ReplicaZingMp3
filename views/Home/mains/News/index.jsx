@@ -1,10 +1,9 @@
-// libs
-import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
 /// components
 import TitleComponent from "../../components/TitleComponent";
 import NewsComponent from "../../components/NewsComponent";
 import ImageCoverComponent from "../../components/ImageCoverComponent";
+// hooks
+import useSelect from "@/hooks/useSelect";
 // actions
 import { fetchNews } from "@/redux/actions/News.action";
 // mocks
@@ -14,12 +13,7 @@ import styles from "./styles.module.scss";
 import newDS from "@/dataSources/News";
 
 const News = () => {
-  const dispatch = useDispatch();
-  const newDT = useSelector((state) => state.newsReducer.news);
-
-  useEffect(() => {
-    dispatch(fetchNews(data));
-  }, []);
+  const newDT = useSelect(fetchNews, (state) => state.newsReducer.news, data);
 
   return (
     <div className={styles["news-wrapper"]}>

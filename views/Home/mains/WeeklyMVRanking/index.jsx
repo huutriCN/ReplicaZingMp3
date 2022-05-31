@@ -1,11 +1,10 @@
-// libs
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
 // components
 import TabComponent from "../../components/TabComponent";
 import TitleComponent from "../../components/TitleComponent";
 import ImageCoverComponent from "../../components/ImageCoverComponent";
 import MVDescription from "../../components/MVDescription";
+// hooks
+import useSelect from "@/hooks/useSelect";
 // actions
 import { fetchMVRanking } from "@/redux/actions/WeeklyMVRanking.action";
 // mocks
@@ -15,12 +14,11 @@ import styles from "./styles.module.scss";
 import ranking from "@/dataSources/WeeklyMVRanking";
 
 const WeeklyMVRanking = () => {
-  const dispatch = useDispatch();
-  const rankingMV = useSelector((state) => state.rankingMVReducer.rankingMV);
-
-  useEffect(() => {
-    dispatch(fetchMVRanking(data));
-  }, []);
+  const rankingMV = useSelect(
+    fetchMVRanking,
+    (state) => state.rankingMVReducer.rankingMV,
+    data,
+  );
 
   return (
     <div className={styles["weekly-mv-ranking-wrapper"]}>

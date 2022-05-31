@@ -1,11 +1,10 @@
-// libs
-import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
-// Components
+// components
 import TabComponent from "../../components/TabComponent";
 import TitleComponent from "../../components/TitleComponent";
 import ImageCoverComponent from "../../components/ImageCoverComponent";
 import SongDescription from "../../components/SongDescription";
+// hooks
+import useSelect from "@/hooks/useSelect";
 // actions
 import { fetchSongRanking } from "@/redux/actions/WeeklySongRanking.action";
 // mocks
@@ -16,14 +15,11 @@ import styles from "./styles.module.scss";
 import ranking from "@/dataSources/WeeklySongRanking";
 
 const WeeklySongRanking = () => {
-  const dispatch = useDispatch();
-  const rankingSong = useSelector(
+  const rankingSong = useSelect(
+    fetchSongRanking,
     (state) => state.weeklySongRankingReducer.weeklySongRanking,
+    data,
   );
-
-  useEffect(() => {
-    dispatch(fetchSongRanking(data));
-  }, []);
 
   return (
     <div className={styles["weekly-song-ranking-wrapper"]}>

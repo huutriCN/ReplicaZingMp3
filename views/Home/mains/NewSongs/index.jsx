@@ -1,12 +1,12 @@
 // libs
-import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useState } from "react";
 import { Pagination } from "antd";
 // components
 import TitleComponent from "../../components/TitleComponent";
 import VPopComponent from "../../components/VPopComponent";
 // hooks
 import usePagination from "@/hooks/usePagination";
+import useSelect from "@/hooks/useSelect";
 // actions
 import { fetchNewSongs } from "@/redux/actions/NewSongs.action";
 /// mocks
@@ -17,8 +17,6 @@ import NewSong from "@/dataSources/NewSongs";
 
 const NewSongs = () => {
   const [isHover, setIsHover] = useState(false);
-  const dispatch = useDispatch();
-  const newSongs = useSelector((state) => state.newSongsReducer.newSongs);
 
   const { currentPage, onHandleChange, start, end } = usePagination({
     total: data.length,
@@ -26,9 +24,11 @@ const NewSongs = () => {
     isHover,
   });
 
-  useEffect(() => {
-    dispatch(fetchNewSongs(data));
-  }, []);
+  const newSongs = useSelect(
+    fetchNewSongs,
+    (state) => state.newSongsReducer.newSongs,
+    data,
+  );
 
   return (
     <div

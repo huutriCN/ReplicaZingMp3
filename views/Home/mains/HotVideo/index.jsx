@@ -1,9 +1,8 @@
-// libs
-import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
 /// components
 import TitleComponent from "../../components/TitleComponent";
 import VideoComponent from "../../components/VideoComponent";
+// hooks
+import useSelect from "@/hooks/useSelect";
 // actions
 import { fetchHotVideo } from "@/redux/actions/HotVideo.action";
 // mocks
@@ -14,12 +13,11 @@ import tracking from "@/dataSources/HotVideo";
 import styles from "./styles.module.scss";
 
 const HotVideo = () => {
-  const dispatch = useDispatch();
-  const hotVideos = useSelector((state) => state.hotVideoReducer.hotVideo);
-
-  useEffect(() => {
-    dispatch(fetchHotVideo(data));
-  }, []);
+  const hotVideos = useSelect(
+    fetchHotVideo,
+    (state) => state.hotVideoReducer.hotVideo,
+    data,
+  );
 
   return (
     <div className={styles["hot-video-wrapper"]}>

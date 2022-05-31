@@ -21,13 +21,13 @@ const HotArtists = () => {
   }, []);
 
   return (
-    <div className={styles["artists-wrapper"]}>
+    <div className={styles["hot-artists-wrapper"]}>
       <TitleComponent
         showedPlay={false}
         title={dataSource.title}
         size="large"
       />
-      <div className={styles["artists-wrapper-inner"]}>
+      <div className={styles["hot-artists-wrapper-inner"]}>
         <div className={styles["artist-first"]}>
           <ArtistComponent {...data[0]} />
         </div>

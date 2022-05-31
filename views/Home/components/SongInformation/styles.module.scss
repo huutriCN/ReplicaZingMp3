@@ -1,7 +1,7 @@
-.infor-wrapper {
+.song-infor-wrapper {
   text-align: left;
 
-  .infor-name {
+  .song-infor-name {
     margin-bottom: 0;
 
     a {
@@ -10,7 +10,7 @@
     }
   }
 
-  .infor-artists {
+  .song-infor-artists {
     display: flex;
     line-height: 17px;
     font-size: 12px;
@@ -22,11 +22,11 @@
 }
 
 .dark-text {
-  .infor-name a {
+  .song-infor-name a {
     color: $thirdColor;
   }
 
-  .infor-artists a {
+  .song-infor-artists a {
     color: #888;
   }
 
@@ -36,7 +36,7 @@
 }
 
 .wrap-text {
-  .infor-name a {
+  .song-infor-name a {
     @include text-wrapper;
   }
 }

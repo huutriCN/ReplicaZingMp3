@@ -1,7 +1,7 @@
-.selection-wrapper {
+.today-selection-wrapper {
   grid-area: today-selection;
 
-  .selection-title {
+  .today-selection-title {
     margin-bottom: 25px;
     font-size: 26px;
     font-family: $primaryFont;
@@ -10,13 +10,13 @@
     color: #800080;
   }
 
-  .selection-content {
+  .today-selection-content {
     display: grid;
     grid-template-columns: repeat(4, 152px);
     grid-gap: 45px 15px;
   }
 
-  .selection-paginate {
+  .today-selection-paginate {
     float: right;
   }
 }

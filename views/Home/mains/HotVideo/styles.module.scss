@@ -1,7 +1,7 @@
-.tracking-wrapper {
+.hot-video-wrapper {
   grid-area: hot-video;
 
-  .content-wrapper {
+  &-inner {
     display: grid;
     grid-template-columns: repeat(4, 145px);
     grid-gap: 35px 25px;

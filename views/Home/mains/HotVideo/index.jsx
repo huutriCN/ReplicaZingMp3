@@ -22,9 +22,9 @@ const HotVideo = () => {
   }, []);
 
   return (
-    <div className={styles["tracking-wrapper"]}>
+    <div className={styles["hot-video-wrapper"]}>
       <TitleComponent showedPlay={false} title={tracking.title} size="large" />
-      <div className={styles["content-wrapper"]}>
+      <div className={styles["hot-video-wrapper-inner"]}>
         {hotVideos.map((videoItem) => (
           <VideoComponent
             key={videoItem.title}

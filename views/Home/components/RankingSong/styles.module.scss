@@ -1,4 +1,4 @@
-.song-wrapper {
+.ranking-song-wrapper {
   position: relative;
   border-bottom: 1px solid #f2f2f2;
   padding: 10px 0;
@@ -8,21 +8,21 @@
     justify-content: space-between;
     align-items: center;
 
-    .song-minus {
+    .ranking-song-minus {
       margin: 0 30px;
     }
 
-    .song-desc {
+    .ranking-song-desc {
       flex-grow: 1;
       display: flex;
       align-items: center;
 
-      .song-info {
+      .ranking-song-info {
         margin-left: 10px;
       }
     }
 
-    .song-tools {
+    .ranking-song-tools {
       @include absolute-center("top");
 
       right: 0;

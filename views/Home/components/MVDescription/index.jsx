@@ -12,8 +12,8 @@ const MVDesciption = ({
   rankingNumber,
   color = "dark",
 }) => (
-  <div className={styles["desc-wrapper"]}>
-    <div className={styles["desc-wrapper-inner"]}>
+  <div className={styles["mv-desc-wrapper"]}>
+    <div className={styles["mv-desc-wrapper-inner"]}>
       <ImageComponent rankingNumber={rankingNumber} thumbnail={thumbnail} />
       <SongInfomation title={title} artistsNames={artistsNames} color={color} />
     </div>

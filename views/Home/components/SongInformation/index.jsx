@@ -12,15 +12,15 @@ const SongInfomation = ({
 }) => (
   <div
     className={classNames({
-      [styles["infor-wrapper"]]: true,
+      [styles["song-infor-wrapper"]]: true,
       [styles["dark-text"]]: color === "dark",
       [styles["wrap-text"]]: wrapText === true,
     })}
   >
-    <h3 className={styles["infor-name"]}>
+    <h3 className={styles["song-infor-name"]}>
       <a href={title}>{title}</a>
     </h3>
-    <div className={styles["infor-artists"]}>
+    <div className={styles["song-infor-artists"]}>
       {artistsNames.map((artist, index) => (
         <h4 key={artist}>
           <a href={artist}>{index !== 0 ? `, ${artist}` : ` ${artist}`}</a>

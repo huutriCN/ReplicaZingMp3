@@ -9,7 +9,7 @@ import { RightOutlined, PlayCircleOutlined } from "@ant-design/icons";
 import styles from "./style.module.scss";
 
 const TitleComponent = ({ title, showedPlay, size }) => (
-  <div className={styles["component-wrapper"]}>
+  <div className={styles["title-component-wrapper"]}>
     <div className={styles["title-wrapper"]}>
       <a
         href="/home"

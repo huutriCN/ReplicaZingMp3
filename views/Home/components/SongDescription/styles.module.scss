@@ -1,4 +1,4 @@
-.desc-wrapper {
+.song-desc-wrapper {
   &-inner {
     position: relative;
     display: flex;
@@ -6,7 +6,7 @@
     justify-content: space-between;
     font-family: $secondaryFont;
 
-    .desc-ranking {
+    .song-desc-ranking {
       margin-right: 15px;
       margin-left: 5px;
       font-size: 20px;
@@ -16,11 +16,11 @@
       }
     }
 
-    .desc-content {
+    .song-desc-content {
       flex-grow: 1;
     }
 
-    .desc-tools {
+    .song-desc-tools {
       position: absolute;
       right: 0;
     }
@@ -32,7 +32,7 @@
   border-bottom: 1px solid #f2f2f2;
   padding: 0 10px 15px 0;
 
-  .desc-ranking {
+  .song-desc-ranking {
     color: $thirdColor;
   }
 }

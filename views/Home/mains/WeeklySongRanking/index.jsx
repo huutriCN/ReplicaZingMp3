@@ -26,7 +26,7 @@ const WeeklySongRanking = () => {
   }, []);
 
   return (
-    <div className={styles["ranking-wrapper"]}>
+    <div className={styles["weekly-song-ranking-wrapper"]}>
       <TitleComponent title={ranking.title} showedPlay={ranking.showPlay} />
       <TabComponent
         tabList={ranking.tabList}
